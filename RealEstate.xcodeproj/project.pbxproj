@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085895E9042198933EC1FCC1 /* libPods-RealEstate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9345D54F4B57102C6C5998 /* libPods-RealEstate.a */; };
 		097EDD231FD11B6A0049C6D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD221FD11B6A0049C6D0 /* main.m */; };
 		097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD251FD11B6A0049C6D0 /* AppDelegate.m */; };
-		097EDD291FD11B6A0049C6D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD281FD11B6A0049C6D0 /* ViewController.m */; };
 		097EDD2C1FD11B6A0049C6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097EDD2A1FD11B6A0049C6D0 /* Main.storyboard */; };
 		097EDD2E1FD11B6A0049C6D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097EDD2D1FD11B6A0049C6D0 /* Assets.xcassets */; };
 		097EDD311FD11B6A0049C6D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097EDD2F1FD11B6A0049C6D0 /* LaunchScreen.storyboard */; };
+		097EDD3F1FD11F6A0049C6D0 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD3E1FD11F6A0049C6D0 /* HomeVC.m */; };
+		097EDD4E1FD152150049C6D0 /* UnitAvailabilityListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD4D1FD152150049C6D0 /* UnitAvailabilityListVC.m */; };
+		097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */; };
+		097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD541FD184840049C6D0 /* ReceiptVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,21 @@
 		097EDD221FD11B6A0049C6D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		097EDD241FD11B6A0049C6D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		097EDD251FD11B6A0049C6D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		097EDD271FD11B6A0049C6D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		097EDD281FD11B6A0049C6D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		097EDD2B1FD11B6A0049C6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		097EDD2D1FD11B6A0049C6D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		097EDD301FD11B6A0049C6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		097EDD321FD11B6A0049C6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097EDD3D1FD11F6A0049C6D0 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		097EDD3E1FD11F6A0049C6D0 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		097EDD4C1FD152150049C6D0 /* UnitAvailabilityListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitAvailabilityListVC.h; sourceTree = "<group>"; };
+		097EDD4D1FD152150049C6D0 /* UnitAvailabilityListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitAvailabilityListVC.m; sourceTree = "<group>"; };
+		097EDD501FD152440049C6D0 /* UnitAvailabilityDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitAvailabilityDetailVC.h; sourceTree = "<group>"; };
+		097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitAvailabilityDetailVC.m; sourceTree = "<group>"; };
+		097EDD531FD184840049C6D0 /* ReceiptVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptVC.h; sourceTree = "<group>"; };
+		097EDD541FD184840049C6D0 /* ReceiptVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptVC.m; sourceTree = "<group>"; };
+		5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.debug.xcconfig"; sourceTree = "<group>"; };
+		D374E63E34E2EFAF60C09357 /* Pods-RealEstate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.release.xcconfig"; sourceTree = "<group>"; };
+		FB9345D54F4B57102C6C5998 /* libPods-RealEstate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealEstate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085895E9042198933EC1FCC1 /* libPods-RealEstate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +58,8 @@
 			children = (
 				097EDD201FD11B6A0049C6D0 /* RealEstate */,
 				097EDD1F1FD11B6A0049C6D0 /* Products */,
+				B9F5ACD3A8AA2E35739B999A /* Pods */,
+				8C8EAA8C8910535061370EF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +76,9 @@
 			children = (
 				097EDD241FD11B6A0049C6D0 /* AppDelegate.h */,
 				097EDD251FD11B6A0049C6D0 /* AppDelegate.m */,
-				097EDD271FD11B6A0049C6D0 /* ViewController.h */,
-				097EDD281FD11B6A0049C6D0 /* ViewController.m */,
+				097EDD3B1FD11C2F0049C6D0 /* ThirdParty */,
+				097EDD391FD11BF30049C6D0 /* Utility */,
+				097EDD381FD11BCD0049C6D0 /* ViewController */,
 				097EDD2A1FD11B6A0049C6D0 /* Main.storyboard */,
 				097EDD2D1FD11B6A0049C6D0 /* Assets.xcassets */,
 				097EDD2F1FD11B6A0049C6D0 /* LaunchScreen.storyboard */,
@@ -79,6 +96,132 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		097EDD381FD11BCD0049C6D0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD3C1FD11F3E0049C6D0 /* HomeVC */,
+				097EDD441FD150B20049C6D0 /* UnitAvailabilityVC */,
+				097EDD451FD150D00049C6D0 /* ReceiptVC */,
+				097EDD461FD150EC0049C6D0 /* PayOutVC */,
+				097EDD471FD1510B0049C6D0 /* CustomerVC */,
+				097EDD481FD1512B0049C6D0 /* BookingVC */,
+				097EDD491FD151430049C6D0 /* DocumentVC */,
+				097EDD4A1FD151580049C6D0 /* CollectionVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		097EDD391FD11BF30049C6D0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		097EDD3B1FD11C2F0049C6D0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		097EDD3C1FD11F3E0049C6D0 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD3D1FD11F6A0049C6D0 /* HomeVC.h */,
+				097EDD3E1FD11F6A0049C6D0 /* HomeVC.m */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		097EDD441FD150B20049C6D0 /* UnitAvailabilityVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD4B1FD151DE0049C6D0 /* UnitAvailabilityListVC */,
+				097EDD4F1FD152250049C6D0 /* UnitAvailabilityDetailVC */,
+			);
+			path = UnitAvailabilityVC;
+			sourceTree = "<group>";
+		};
+		097EDD451FD150D00049C6D0 /* ReceiptVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD531FD184840049C6D0 /* ReceiptVC.h */,
+				097EDD541FD184840049C6D0 /* ReceiptVC.m */,
+			);
+			path = ReceiptVC;
+			sourceTree = "<group>";
+		};
+		097EDD461FD150EC0049C6D0 /* PayOutVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PayOutVC;
+			sourceTree = "<group>";
+		};
+		097EDD471FD1510B0049C6D0 /* CustomerVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomerVC;
+			sourceTree = "<group>";
+		};
+		097EDD481FD1512B0049C6D0 /* BookingVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookingVC;
+			sourceTree = "<group>";
+		};
+		097EDD491FD151430049C6D0 /* DocumentVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DocumentVC;
+			sourceTree = "<group>";
+		};
+		097EDD4A1FD151580049C6D0 /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionVC;
+			sourceTree = "<group>";
+		};
+		097EDD4B1FD151DE0049C6D0 /* UnitAvailabilityListVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD4C1FD152150049C6D0 /* UnitAvailabilityListVC.h */,
+				097EDD4D1FD152150049C6D0 /* UnitAvailabilityListVC.m */,
+			);
+			path = UnitAvailabilityListVC;
+			sourceTree = "<group>";
+		};
+		097EDD4F1FD152250049C6D0 /* UnitAvailabilityDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD501FD152440049C6D0 /* UnitAvailabilityDetailVC.h */,
+				097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */,
+			);
+			path = UnitAvailabilityDetailVC;
+			sourceTree = "<group>";
+		};
+		8C8EAA8C8910535061370EF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB9345D54F4B57102C6C5998 /* libPods-RealEstate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9F5ACD3A8AA2E35739B999A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */,
+				D374E63E34E2EFAF60C09357 /* Pods-RealEstate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 097EDD351FD11B6A0049C6D0 /* Build configuration list for PBXNativeTarget "RealEstate" */;
 			buildPhases = (
+				A1833A1FFC58349815C3DE28 /* [CP] Check Pods Manifest.lock */,
 				097EDD1A1FD11B690049C6D0 /* Sources */,
 				097EDD1B1FD11B690049C6D0 /* Frameworks */,
 				097EDD1C1FD11B690049C6D0 /* Resources */,
+				66CEF7953982C1256F6644C8 /* [CP] Embed Pods Frameworks */,
+				237D8F889348A788A8298827 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,7 +256,7 @@
 				TargetAttributes = {
 					097EDD1D1FD11B690049C6D0 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -145,14 +291,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		237D8F889348A788A8298827 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CEF7953982C1256F6644C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1833A1FFC58349815C3DE28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		097EDD1A1FD11B690049C6D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097EDD291FD11B6A0049C6D0 /* ViewController.m in Sources */,
+				097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */,
+				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
+				097EDD3F1FD11F6A0049C6D0 /* HomeVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,
+				097EDD4E1FD152150049C6D0 /* UnitAvailabilityListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +465,10 @@
 		};
 		097EDD361FD11B6A0049C6D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RealEstate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.RealEstate;
@@ -279,8 +478,10 @@
 		};
 		097EDD371FD11B6A0049C6D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D374E63E34E2EFAF60C09357 /* Pods-RealEstate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RealEstate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.RealEstate;
@@ -307,6 +508,7 @@
 				097EDD371FD11B6A0049C6D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

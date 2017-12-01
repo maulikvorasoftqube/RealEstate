@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ReceiptVC.h
 //  RealEstate
 //
 //  Created by harikrishna patel on 01/12/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ReceiptVC : UIViewController
 
 @end
-
