@@ -17,6 +17,7 @@
 		097EDD4E1FD152150049C6D0 /* UnitAvailabilityListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD4D1FD152150049C6D0 /* UnitAvailabilityListVC.m */; };
 		097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */; };
 		097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD541FD184840049C6D0 /* ReceiptVC.m */; };
+		097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitAvailabilityDetailVC.m; sourceTree = "<group>"; };
 		097EDD531FD184840049C6D0 /* ReceiptVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptVC.h; sourceTree = "<group>"; };
 		097EDD541FD184840049C6D0 /* ReceiptVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptVC.m; sourceTree = "<group>"; };
+		097EDD571FD193B30049C6D0 /* UnitDetailList_CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDetailList_CollectionCell.h; sourceTree = "<group>"; };
+		097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDetailList_CollectionCell.m; sourceTree = "<group>"; };
 		5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.debug.xcconfig"; sourceTree = "<group>"; };
 		D374E63E34E2EFAF60C09357 /* Pods-RealEstate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.release.xcconfig"; sourceTree = "<group>"; };
 		FB9345D54F4B57102C6C5998 /* libPods-RealEstate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealEstate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 			children = (
 				097EDD531FD184840049C6D0 /* ReceiptVC.h */,
 				097EDD541FD184840049C6D0 /* ReceiptVC.m */,
+				097EDD561FD1934A0049C6D0 /* CollectionCellVC */,
 			);
 			path = ReceiptVC;
 			sourceTree = "<group>";
@@ -203,6 +207,15 @@
 				097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */,
 			);
 			path = UnitAvailabilityDetailVC;
+			sourceTree = "<group>";
+		};
+		097EDD561FD1934A0049C6D0 /* CollectionCellVC */ = {
+			isa = PBXGroup;
+			children = (
+				097EDD571FD193B30049C6D0 /* UnitDetailList_CollectionCell.h */,
+				097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */,
+			);
+			path = CollectionCellVC;
 			sourceTree = "<group>";
 		};
 		8C8EAA8C8910535061370EF3 /* Frameworks */ = {
@@ -346,6 +359,7 @@
 			files = (
 				097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */,
 				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
+				097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */,
 				097EDD3F1FD11F6A0049C6D0 /* HomeVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,

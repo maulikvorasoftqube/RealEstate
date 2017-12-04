@@ -44,6 +44,8 @@
 }
 
 - (IBAction)btnReceipt:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnPayOut:(id)sender {
@@ -60,4 +62,5 @@
 
 - (IBAction)btnDocument:(id)sender {
 }
+
 @end
