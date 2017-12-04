@@ -18,6 +18,11 @@
 		097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD511FD152440049C6D0 /* UnitAvailabilityDetailVC.m */; };
 		097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD541FD184840049C6D0 /* ReceiptVC.m */; };
 		097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */; };
+		09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDE81FD511B000478354 /* PayOutVC.m */; };
+		09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEB1FD511C700478354 /* CustomerVC.m */; };
+		09C5EDEF1FD511D100478354 /* BookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEE1FD511D100478354 /* BookingVC.m */; };
+		09C5EDF21FD511DD00478354 /* DocumentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF11FD511DD00478354 /* DocumentVC.m */; };
+		09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF41FD511E700478354 /* CollectionVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,17 @@
 		097EDD541FD184840049C6D0 /* ReceiptVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptVC.m; sourceTree = "<group>"; };
 		097EDD571FD193B30049C6D0 /* UnitDetailList_CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDetailList_CollectionCell.h; sourceTree = "<group>"; };
 		097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDetailList_CollectionCell.m; sourceTree = "<group>"; };
+		09C5EDE71FD511B000478354 /* PayOutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOutVC.h; sourceTree = "<group>"; };
+		09C5EDE81FD511B000478354 /* PayOutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOutVC.m; sourceTree = "<group>"; };
+		09C5EDEA1FD511C700478354 /* CustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerVC.h; sourceTree = "<group>"; };
+		09C5EDEB1FD511C700478354 /* CustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerVC.m; sourceTree = "<group>"; };
+		09C5EDED1FD511D100478354 /* BookingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingVC.h; sourceTree = "<group>"; };
+		09C5EDEE1FD511D100478354 /* BookingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVC.m; sourceTree = "<group>"; };
+		09C5EDF01FD511DD00478354 /* DocumentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentVC.h; sourceTree = "<group>"; };
+		09C5EDF11FD511DD00478354 /* DocumentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentVC.m; sourceTree = "<group>"; };
+		09C5EDF31FD511E700478354 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
+		09C5EDF41FD511E700478354 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
+		09C5EDF61FD5120900478354 /* Globle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globle.h; sourceTree = "<group>"; };
 		5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.debug.xcconfig"; sourceTree = "<group>"; };
 		D374E63E34E2EFAF60C09357 /* Pods-RealEstate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.release.xcconfig"; sourceTree = "<group>"; };
 		FB9345D54F4B57102C6C5998 /* libPods-RealEstate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealEstate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +133,7 @@
 		097EDD391FD11BF30049C6D0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDF61FD5120900478354 /* Globle.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -159,6 +176,8 @@
 		097EDD461FD150EC0049C6D0 /* PayOutVC */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDE71FD511B000478354 /* PayOutVC.h */,
+				09C5EDE81FD511B000478354 /* PayOutVC.m */,
 			);
 			path = PayOutVC;
 			sourceTree = "<group>";
@@ -166,6 +185,8 @@
 		097EDD471FD1510B0049C6D0 /* CustomerVC */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDEA1FD511C700478354 /* CustomerVC.h */,
+				09C5EDEB1FD511C700478354 /* CustomerVC.m */,
 			);
 			path = CustomerVC;
 			sourceTree = "<group>";
@@ -173,6 +194,8 @@
 		097EDD481FD1512B0049C6D0 /* BookingVC */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDED1FD511D100478354 /* BookingVC.h */,
+				09C5EDEE1FD511D100478354 /* BookingVC.m */,
 			);
 			path = BookingVC;
 			sourceTree = "<group>";
@@ -180,6 +203,8 @@
 		097EDD491FD151430049C6D0 /* DocumentVC */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDF01FD511DD00478354 /* DocumentVC.h */,
+				09C5EDF11FD511DD00478354 /* DocumentVC.m */,
 			);
 			path = DocumentVC;
 			sourceTree = "<group>";
@@ -187,6 +212,8 @@
 		097EDD4A1FD151580049C6D0 /* CollectionVC */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EDF31FD511E700478354 /* CollectionVC.h */,
+				09C5EDF41FD511E700478354 /* CollectionVC.m */,
 			);
 			path = CollectionVC;
 			sourceTree = "<group>";
@@ -357,9 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */,
+				09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */,
+				09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */,
 				097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */,
 				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
+				09C5EDEF1FD511D100478354 /* BookingVC.m in Sources */,
 				097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */,
+				09C5EDF21FD511DD00478354 /* DocumentVC.m in Sources */,
 				097EDD3F1FD11F6A0049C6D0 /* HomeVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,
