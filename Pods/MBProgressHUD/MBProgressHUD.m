@@ -140,7 +140,8 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
 #pragma mark - Show & hide
 
-- (void)showAnimated:(BOOL)animated {
+- (void)showAnimated:(BOOL)animated
+{
     MBMainThreadAssert();
     [self.minShowTimer invalidate];
     self.useAnimation = animated;

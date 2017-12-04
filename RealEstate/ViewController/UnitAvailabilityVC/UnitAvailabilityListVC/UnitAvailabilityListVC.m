@@ -7,18 +7,27 @@
 //
 
 #import "UnitAvailabilityListVC.h"
+#import "Globle.h"
 
 @interface UnitAvailabilityListVC ()
+{
+    NSMutableArray aryGetList;
+}
 @end
 
 @implementation UnitAvailabilityListVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    aryGetList = [[NSMutableArray alloc]init];
+    
     [self commonData];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -50,6 +59,7 @@
     }
     
     //UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:1];
+ //   UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:2];
     
     return cell;
 }
@@ -66,6 +76,45 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)btnHome:(id)sender {
+- (IBAction)btnHome:(id)sender
+{
 }
+
+#pragma mark - getlist
+
+-(void)getList
+{
+    if ([Utility isInterNetConnectionIsActive] == false)
+    {
+        UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:INTERNET delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alrt show];
+        return;
+    }
+    
+    NSString *strURL = [NSString stringWithFormat:@"%@/%@",BASE_URL,GetList];
+
+    [Utility PostApiCall:strURL params:nil block:^(NSMutableDictionary *dicResponce, NSError *error)
+     {
+        // [FTIndicator dismissProgress];
+         
+         NSLog(@"datata=%@",dicResponce);
+         
+        //aryGetList
+         
+      /*   if ([[dicResponce objectForKey:@"status"]intValue] == 1)
+         {
+             UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:SUCCESSMSG delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [alrt show];
+         }
+         else
+         {
+             UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:VALIDEMAIL delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [alrt show];
+         }*/
+         
+     }];
+    
+}
+
+
 @end
