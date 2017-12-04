@@ -74,9 +74,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "FTIndicator/FTIndicator/FTProgressIndicator/FTProgressIndicator.bundle"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "FTIndicator/FTIndicator/FTProgressIndicator/FTProgressIndicator.bundle"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
 fi
 

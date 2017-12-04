@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8430B486DC14322F5FBB54ECE676AC26'
-               BlueprintName = 'RealReachability'
+               BlueprintIdentifier = 'E534BD0185F668A6527432B4941AFD5C'
+               BlueprintName = 'FTIndicator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libRealReachability.a'>
+               BuildableName = 'libFTIndicator.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
