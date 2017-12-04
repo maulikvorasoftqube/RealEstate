@@ -8,7 +8,9 @@
 #import "Globle.h"
 #import "Utility.h"
 
+
 @implementation Utility
+
 NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 
@@ -851,17 +853,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 
 #pragma mark - Interner connection active or not
-+(BOOL)isInterNetConnectionIsActive{
-    
-    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-    if (networkStatus == NotReachable)
-    {
-        NSLog(@"There IS NO internet connection");
-        return NO;
-    }
-    return YES;
-}
+
 
 
 +(NSString *)imageToNSString:(UIImage *)image
@@ -1213,36 +1205,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
      [[NSUserDefaults standardUserDefaults]setObject:_aPasswordTextField.text forKey:@"Password"];*/
     
 }
-+(NSString *)getAdminHREmployeeValue
-{
-    NSArray *jsonAry = [DBOperation selectData:@"Select * from Login"];
-    NSString *strJs;
-    NSMutableDictionary *dic;
-    
-    if (jsonAry.count > 0)
-    {
-        strJs= [[jsonAry objectAtIndex:0]objectForKey:@"JsonStr"];
-        dic= [Utility ConvertStringtoJSON:strJs];
-    }
 
-    NSString *asadmi = [NSString stringWithFormat:@"%@",[[[dic objectForKey:@"result"]objectForKey:@"user_information"]objectForKey:@"is_admin"]];
-    
-    NSString *roleid = [NSString stringWithFormat:@"%@",[[[dic objectForKey:@"result"]objectForKey:@"user_information"]objectForKey:@"role_id"]];
-    
-    if ([asadmi isEqualToString:@"1"] && [roleid isEqualToString:@"0"])
-    {
-        return @"ADMIN";
-    }
-    else if ([asadmi isEqualToString:@"0"] && [roleid isEqualToString:@"1"])
-    {
-        return @"HR";
-    }
-    else
-    {
-        return @"EMPLOYEE";
-    }
-    return @"";
-}
 /*+(UIColor *)colorFromHexString:(NSString *)hexString
 {
     unsigned rgbValue = 0;

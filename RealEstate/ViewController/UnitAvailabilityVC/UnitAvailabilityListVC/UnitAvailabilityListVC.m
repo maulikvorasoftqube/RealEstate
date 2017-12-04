@@ -11,7 +11,7 @@
 
 @interface UnitAvailabilityListVC ()
 {
-    NSMutableArray aryGetList;
+    NSMutableArray *aryGetList;
 }
 @end
 

@@ -33,6 +33,12 @@
 
 #define GetList @"GetAllBookingList"
 
+
+
+#import <AFNetworking.h>
+#import <RealReachability.h>
+
+
 //AddEditBooking
 //GetUnitAvailabilityList
 //GetCurrentMonthBookingList
