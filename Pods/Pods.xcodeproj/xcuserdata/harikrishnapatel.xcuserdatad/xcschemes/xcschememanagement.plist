@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FTIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,22 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8430B486DC14322F5FBB54ECE676AC26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADB7888C38FD3734E6DE0C9BA309F530</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B797C9502DB2C0653A52AA99F8D3E55F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB81FC1C3B03FD2A7CAD7713CA297750</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E534BD0185F668A6527432B4941AFD5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
