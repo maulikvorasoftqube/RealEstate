@@ -20,9 +20,14 @@
 		097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */; };
 		09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDE81FD511B000478354 /* PayOutVC.m */; };
 		09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEB1FD511C700478354 /* CustomerVC.m */; };
-		09C5EDEF1FD511D100478354 /* BookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEE1FD511D100478354 /* BookingVC.m */; };
 		09C5EDF21FD511DD00478354 /* DocumentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF11FD511DD00478354 /* DocumentVC.m */; };
 		09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF41FD511E700478354 /* CollectionVC.m */; };
+		09C5EDFB1FD5460000478354 /* AddCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDFA1FD5460000478354 /* AddCustomerVC.m */; };
+		09C5EDFF1FD5554C00478354 /* CustomerDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */; };
+		09C5EE031FD559AC00478354 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE021FD559AC00478354 /* UITextView+Placeholder.m */; };
+		09C5EE0A1FD574ED00478354 /* UnitPrice_TblCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE091FD574ED00478354 /* UnitPrice_TblCellVC.m */; };
+		09C5EE111FD583FC00478354 /* BookingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE101FD583FC00478354 /* BookingListVC.m */; };
+		09C5EE161FD58EEA00478354 /* AddBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE151FD58EEA00478354 /* AddBookingVC.m */; };
 		C37825791FD5169000EE6E3F /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C37825771FD5168F00EE6E3F /* Utility.m */; };
 /* End PBXBuildFile section */
 
@@ -49,13 +54,23 @@
 		09C5EDE81FD511B000478354 /* PayOutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOutVC.m; sourceTree = "<group>"; };
 		09C5EDEA1FD511C700478354 /* CustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerVC.h; sourceTree = "<group>"; };
 		09C5EDEB1FD511C700478354 /* CustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerVC.m; sourceTree = "<group>"; };
-		09C5EDED1FD511D100478354 /* BookingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingVC.h; sourceTree = "<group>"; };
-		09C5EDEE1FD511D100478354 /* BookingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVC.m; sourceTree = "<group>"; };
 		09C5EDF01FD511DD00478354 /* DocumentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentVC.h; sourceTree = "<group>"; };
 		09C5EDF11FD511DD00478354 /* DocumentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentVC.m; sourceTree = "<group>"; };
 		09C5EDF31FD511E700478354 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
 		09C5EDF41FD511E700478354 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
 		09C5EDF61FD5120900478354 /* Globle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globle.h; sourceTree = "<group>"; };
+		09C5EDF91FD5460000478354 /* AddCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerVC.h; sourceTree = "<group>"; };
+		09C5EDFA1FD5460000478354 /* AddCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerVC.m; sourceTree = "<group>"; };
+		09C5EDFD1FD5554C00478354 /* CustomerDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDetailVC.h; sourceTree = "<group>"; };
+		09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDetailVC.m; sourceTree = "<group>"; };
+		09C5EE011FD559AC00478354 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		09C5EE021FD559AC00478354 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		09C5EE081FD574ED00478354 /* UnitPrice_TblCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPrice_TblCellVC.h; sourceTree = "<group>"; };
+		09C5EE091FD574ED00478354 /* UnitPrice_TblCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPrice_TblCellVC.m; sourceTree = "<group>"; };
+		09C5EE0F1FD583FC00478354 /* BookingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingListVC.h; sourceTree = "<group>"; };
+		09C5EE101FD583FC00478354 /* BookingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingListVC.m; sourceTree = "<group>"; };
+		09C5EE141FD58EEA00478354 /* AddBookingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBookingVC.h; sourceTree = "<group>"; };
+		09C5EE151FD58EEA00478354 /* AddBookingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBookingVC.m; sourceTree = "<group>"; };
 		5C19FADEAE4EDCD1F11D29F7 /* Pods-RealEstate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstate/Pods-RealEstate.debug.xcconfig"; sourceTree = "<group>"; };
 		C37825771FD5168F00EE6E3F /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		C37825781FD5168F00EE6E3F /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
@@ -146,6 +161,7 @@
 		097EDD3B1FD11C2F0049C6D0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				09C5EE001FD5599300478354 /* TextView_PlaceHolder */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -192,6 +208,8 @@
 			children = (
 				09C5EDEA1FD511C700478354 /* CustomerVC.h */,
 				09C5EDEB1FD511C700478354 /* CustomerVC.m */,
+				09C5EDF81FD545CC00478354 /* AddCustomerVC */,
+				09C5EDFC1FD5551E00478354 /* CustomerDetailVC */,
 			);
 			path = CustomerVC;
 			sourceTree = "<group>";
@@ -199,8 +217,9 @@
 		097EDD481FD1512B0049C6D0 /* BookingVC */ = {
 			isa = PBXGroup;
 			children = (
-				09C5EDED1FD511D100478354 /* BookingVC.h */,
-				09C5EDEE1FD511D100478354 /* BookingVC.m */,
+				09C5EE131FD58EA800478354 /* AddBookingVC */,
+				09C5EE0E1FD583D400478354 /* BookingListVC */,
+				09C5EE041FD5747000478354 /* UnitPriceList_tblCellVC */,
 			);
 			path = BookingVC;
 			sourceTree = "<group>";
@@ -248,6 +267,60 @@
 				097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */,
 			);
 			path = CollectionCellVC;
+			sourceTree = "<group>";
+		};
+		09C5EDF81FD545CC00478354 /* AddCustomerVC */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EDF91FD5460000478354 /* AddCustomerVC.h */,
+				09C5EDFA1FD5460000478354 /* AddCustomerVC.m */,
+			);
+			path = AddCustomerVC;
+			sourceTree = "<group>";
+		};
+		09C5EDFC1FD5551E00478354 /* CustomerDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EDFD1FD5554C00478354 /* CustomerDetailVC.h */,
+				09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */,
+			);
+			path = CustomerDetailVC;
+			sourceTree = "<group>";
+		};
+		09C5EE001FD5599300478354 /* TextView_PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EE011FD559AC00478354 /* UITextView+Placeholder.h */,
+				09C5EE021FD559AC00478354 /* UITextView+Placeholder.m */,
+			);
+			path = TextView_PlaceHolder;
+			sourceTree = "<group>";
+		};
+		09C5EE041FD5747000478354 /* UnitPriceList_tblCellVC */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EE081FD574ED00478354 /* UnitPrice_TblCellVC.h */,
+				09C5EE091FD574ED00478354 /* UnitPrice_TblCellVC.m */,
+			);
+			path = UnitPriceList_tblCellVC;
+			sourceTree = "<group>";
+		};
+		09C5EE0E1FD583D400478354 /* BookingListVC */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EE0F1FD583FC00478354 /* BookingListVC.h */,
+				09C5EE101FD583FC00478354 /* BookingListVC.m */,
+			);
+			path = BookingListVC;
+			sourceTree = "<group>";
+		};
+		09C5EE131FD58EA800478354 /* AddBookingVC */ = {
+			isa = PBXGroup;
+			children = (
+				09C5EE141FD58EEA00478354 /* AddBookingVC.h */,
+				09C5EE151FD58EEA00478354 /* AddBookingVC.m */,
+			);
+			path = AddBookingVC;
 			sourceTree = "<group>";
 		};
 		8C8EAA8C8910535061370EF3 /* Frameworks */ = {
@@ -391,17 +464,22 @@
 			files = (
 				09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */,
 				09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */,
+				09C5EDFF1FD5554C00478354 /* CustomerDetailVC.m in Sources */,
 				09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */,
+				09C5EE0A1FD574ED00478354 /* UnitPrice_TblCellVC.m in Sources */,
 				097EDD521FD152440049C6D0 /* UnitAvailabilityDetailVC.m in Sources */,
 				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
-				09C5EDEF1FD511D100478354 /* BookingVC.m in Sources */,
 				097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */,
 				09C5EDF21FD511DD00478354 /* DocumentVC.m in Sources */,
+				09C5EE111FD583FC00478354 /* BookingListVC.m in Sources */,
+				09C5EE161FD58EEA00478354 /* AddBookingVC.m in Sources */,
 				097EDD3F1FD11F6A0049C6D0 /* HomeVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
+				09C5EDFB1FD5460000478354 /* AddCustomerVC.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,
 				097EDD4E1FD152150049C6D0 /* UnitAvailabilityListVC.m in Sources */,
 				C37825791FD5169000EE6E3F /* Utility.m in Sources */,
+				09C5EE031FD559AC00478354 /* UITextView+Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = RealEstate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.RealEstate;
@@ -534,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = RealEstate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SDK.RealEstate;

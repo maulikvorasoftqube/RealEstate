@@ -10,4 +10,15 @@
 
 @interface CustomerVC : UIViewController
 
+
+- (IBAction)btnBack:(id)sender;
+- (IBAction)btnHome:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property (strong, nonatomic) IBOutlet UITableView *tblCustomerList;
+
+
+- (IBAction)btnAddNewCustomer:(id)sender;
+
 @end

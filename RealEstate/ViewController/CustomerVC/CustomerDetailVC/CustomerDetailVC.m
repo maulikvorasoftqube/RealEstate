@@ -1,18 +1,18 @@
 //
-//  CustomerVC.m
+//  CustomerDetailVC.m
 //  RealEstate
 //
 //  Created by harikrishna patel on 04/12/17.
 //  Copyright © 2017 Softqube. All rights reserved.
 //
 
-#import "CustomerVC.h"
+#import "CustomerDetailVC.h"
 
-@interface CustomerVC ()
+@interface CustomerDetailVC ()
 
 @end
 
-@implementation CustomerVC
+@implementation CustomerDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,10 @@
 
 -(void)commonData
 {
-    self.tblCustomerList.separatorStyle =UITableViewCellSeparatorStyleNone;
+   self.tblUnitDetailList.separatorStyle =UITableViewCellSeparatorStyleNone;
+    
+    self.tblUnitDetailList.tableHeaderView=self.viewHeader;
+    self.tblUnitDetailList.tableFooterView=self.viewFooter;
 }
 
 #pragma mark - UITableView Delegate
@@ -35,6 +38,7 @@
 {
     return 3;
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -52,17 +56,8 @@
     //UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:1];
     //   UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:2];
     
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CustomerDetailVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)btnEditCustomer:(id)sender {
     
+    return cell;
 }
 
 #pragma mark - UIButton Action
@@ -73,11 +68,4 @@
 
 - (IBAction)btnHome:(id)sender {
 }
-
-- (IBAction)btnAddNewCustomer:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"AddCustomerVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-
-}
-
 @end

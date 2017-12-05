@@ -1,18 +1,18 @@
 //
-//  CustomerVC.m
+//  BookingListVC.m
 //  RealEstate
 //
 //  Created by harikrishna patel on 04/12/17.
 //  Copyright © 2017 Softqube. All rights reserved.
 //
 
-#import "CustomerVC.h"
+#import "BookingListVC.h"
 
-@interface CustomerVC ()
+@interface BookingListVC ()
 
 @end
 
-@implementation CustomerVC
+@implementation BookingListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,18 @@
 
 -(void)commonData
 {
-    self.tblCustomerList.separatorStyle =UITableViewCellSeparatorStyleNone;
+    self.viewFilter_Popup.hidden=YES;
+    
+    self.tblBookingList.separatorStyle =UITableViewCellSeparatorStyleNone;
+    
+    self.btnSearch.layer.cornerRadius=4;
+    self.btnSearch.clipsToBounds=YES;
+    
+    self.btnReset.layer.cornerRadius=4;
+    self.btnReset.clipsToBounds=YES;
+    
+    self.viewInner_filterPopup.layer.cornerRadius=4;
+    self.viewInner_filterPopup.clipsToBounds=YES;
 }
 
 #pragma mark - UITableView Delegate
@@ -57,12 +68,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CustomerDetailVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)btnEditCustomer:(id)sender {
-    
 }
 
 #pragma mark - UIButton Action
@@ -71,13 +76,26 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)btnFilter:(id)sender {
+    self.viewFilter_Popup.hidden=NO;
+}
+
 - (IBAction)btnHome:(id)sender {
 }
 
-- (IBAction)btnAddNewCustomer:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"AddCustomerVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-
+- (IBAction)btnClose_FilterPopup:(id)sender {
+    self.viewFilter_Popup.hidden=YES;
 }
 
+- (IBAction)btnSelectFromDate:(id)sender {
+}
+
+- (IBAction)btnSelectToDate:(id)sender {
+}
+
+- (IBAction)btnSearch:(id)sender {
+}
+
+- (IBAction)btnReset:(id)sender {
+}
 @end

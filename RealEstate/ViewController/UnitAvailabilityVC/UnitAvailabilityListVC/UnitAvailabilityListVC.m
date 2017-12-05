@@ -49,6 +49,7 @@
 {
     UITableViewCell *cell=(UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell_unitlist"];
     
+    
     if(indexPath.row % 2)
     {
         cell.contentView.backgroundColor=[UIColor whiteColor];

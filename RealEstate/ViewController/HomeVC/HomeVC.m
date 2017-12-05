@@ -32,6 +32,8 @@
 - (IBAction)btnCount2:(id)sender {
 }
 - (IBAction)btnCount3:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"BookingListVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)btnCount4:(id)sender {
 }
@@ -52,9 +54,13 @@
 }
 
 - (IBAction)btnCustomer:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CustomerVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnBooking:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"AddBookingVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnCollection:(id)sender {
