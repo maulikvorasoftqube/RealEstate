@@ -7,7 +7,7 @@
 //
 
 
-#import "Globle.h"
+//#import "Global.h"
 
 @import UIKit;
 @interface Utility : NSObject
@@ -16,24 +16,24 @@
 + (UIColor *) colorFromHexString:(NSString *)hexString;
 
 //set font
-
+//+(void)setFontOfLable:(UILabel *)tempLable;
+//+(void)setFontOfLableBold:(UILabel *)tempLable;
+//+(void)setFontOfButton:(UIButton *)tempBtn;
++(void)setFontOfTextField:(UITextField *)temptxt;
 
 //set View Design
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)imageWithColor:(UIColor *)color;
-
+//+(void)setRoundButton:(UIButton *)tempBtn;
+//+(void)setRoundUITextField:(UITextField *)temptxt;
++(void)setLeftViewInTextField:(UITextField *)temptxt;
++(void)setRoundUITextFieldWithoutBorder:(UITextField *)temptxt;
 
 +(void)setLeftViewInTextField:(UITextField *)temptxt imageName:(NSString *)imageName leftSpace:(float)leftSpace topSpace:(float)topSpace height:(float)height width:(float)width;
 +(void)setLeftViewInTextField:(UITextField *)temptxt imageName:(NSString *)imageName leftSpace:(float)leftSpace topSpace:(float)topSpace size:(float)size;
 +(void)setLeftViewInTextField:(UITextField *)temptxt imageName:(NSString *)imageName leftSpace:(float)leftSpace topSpace:(float)topSpace;
 +(void)setLeftViewInTextField:(UITextField *)temptxt imageName:(NSString *)imageName;
-
-+(void)setTextFieldLeftRightBottom_lightGrayColor_Border:(UITextField*)tetField;
-+(void)setTextFieldLeftRightBottom_lightGrayColor_Border:(UITextField*)tetField x:(float)x;
-+(void)setTextField_BottomBorder:(UITextField*)tetField color:(UIColor*)color str:(NSString *)str;
-+(void)setTextField_PlaceholderColor:(UITextField*)textField text:(NSString*)text color:(UIColor*)color;
-+(void)setTextView_BottomBorder:(UITextView*)tetView color:(UIColor*)color;
-
++(void)setRoundUITextFieldwithLeftSpace:(UITextField *)temptxt lettSpace:(float)leftSpace;
 
 +(void)setLetfAndRightViewOfTextField:(UITextField *)txtField leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName;
 +(void)setLetfViewOfTextField:(UITextField *)txtField leftImageName:(NSString *)leftImageName;
@@ -58,8 +58,6 @@
 
 +(BOOL)validateTermsAndCondition:(UIButton *)button;
 +(BOOL)validateTextfieldLength:(NSString*)string;
-+(NSString *) randomStringWithLength: (int) len;
-+ (NSString *)getDateStringForDate_status:(NSString *)timeStamp;
 
 //changeDateFormate
 +(NSString*)ChangeDateformate:(NSString *)strDate oldDateFtm:(NSString *)strOldDateFtm newDateFtm:(NSString *)strNewDateFtm;
@@ -70,7 +68,7 @@
 +(NSString *) stringByStrippingHTML:(NSString *)strString;
 
 + (NSString *)getSizeOfFile:(NSString *)filePath;
-+(NSString *) getTimeStamp;
+
 
 // For SliderView
 + (void)SetViewControllerName:(NSString *)viewcontrollerName;
@@ -78,8 +76,6 @@
 +(BOOL)isInterNetConnectionIsActive;
 
 +(NSString *)imageToNSString:(UIImage *)image;
-
-+ (NSString *)getMilisecondToTime:(NSString *)timeStamp;
 
 +(NSString *)convertMiliSecondtoDate:(NSString *)dateFormate date:(NSString *)strDate;
 
@@ -94,13 +90,11 @@
 +(UIView*)addCell_PopupView:(UIView *)viewCustome ParentView:(UIView*)ParentView sender:(id)sender;
 + (void)dismissAllPopTipViews : (NSMutableArray *)arr;
 
-+(NSString *)getUserID_LocalDB;
-+(NSMutableDictionary *)getUserInfo_LocalDB;
+
 #pragma mark - Api Function
 
 +(void)PostApiCall:(NSString *)apiUrl params:(NSMutableDictionary *)param block:(void (^)(NSMutableDictionary *,NSError *))block;
-+(void)PostApiCall_AfterTenSec:(NSString *)apiUrl params:(NSMutableDictionary *)param block:(void (^)(NSMutableDictionary *,NSError *))block;
-+(void)apicallforuploadimage:(NSString *)apiName image:(UIImage *)selectedimage parms:(NSMutableDictionary *)parms block:(void (^)(NSMutableDictionary *,NSError *))block;
+
 
 #pragma mark - convert json
 
@@ -113,6 +107,8 @@
 +(NSString *)getCurrentUserType;
 +(NSString *)getUserRoleRightList :(NSString *)strRightName settingType:(NSString *)strSettingType;
 +(NSString *)randomImageGenerator;
++(void)SaveImageDocumentDirectory :(NSMutableDictionary *)dicImg :(NSString *)url;
++(void)RemoveImageDocumentDirectory;
 +(void)SearchTextView: (UIView *)viewSearch;
 
 /*+(void)POSTapiCall:(NSString *)apiName parms:(NSMutableDictionary *)parms block:(void (^)(NSMutableDictionary *,NSError *))block;
@@ -139,8 +135,15 @@
 
 +(void)DeleteAllSqliteTable;
 
-+(NSString *)getAdminHREmployeeValue;
++(void)NotificationTesting;
 
-+ (UIColor *)colorFromHexString:(NSString *)hexString;
++(void)DisablePanGesture;
+
++(NSString *)getDataFrom:(NSString *)url;
+
++(NSString*) languageSelectedStringForKey:(NSString *)key selectedLanguage:(int)selectedLanguage;
++(void)DeleteAllSqliteTable1;
+
++(void)valueCheckforERP : (NSString *)strValue;
 
 @end

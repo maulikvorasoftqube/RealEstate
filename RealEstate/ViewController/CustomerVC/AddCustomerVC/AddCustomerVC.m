@@ -7,6 +7,7 @@
 //
 
 #import "AddCustomerVC.h"
+#import "Globle.h"
 
 @interface AddCustomerVC ()<UITextFieldDelegate>
 
@@ -53,6 +54,8 @@
     self.tblReferenceUserNameList_Height.constant=0;
     
     self.tblReferenceUserNameList.separatorStyle =UITableViewCellSeparatorStyleNone;
+    
+    [Utility setRightViewOfTextField:self.txtRefUserName rightImageName:@"down_arrow"];
 }
 
 #pragma mark - UITextField Delegate

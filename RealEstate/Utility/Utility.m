@@ -5,13 +5,13 @@
 //  Created by Sanjay on 23/07/15.
 //  Copyright (c) 2015 Sanjay. All rights reserved.
 //
-#import "Globle.h"
-#import "Utility.h"
 
+#import "Utility.h"
+#import "Globle.h"
+
+//#import "REFrostedViewController.h"
 
 @implementation Utility
-
-NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 
 
@@ -209,284 +209,10 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     [txtName.layer setBorderWidth:borderwidth];
     [txtName.layer setBorderColor:(__bridge CGColorRef _Nullable)(borderColor)];
     [txtName.layer setCornerRadius:cornerRadius];
-}
-
-+(void)setTextFieldLeftRightBottom_lightGrayColor_Border:(UITextField*)tetField
-{
-    //Bottom border
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.frame = CGRectMake(0.0f, tetField.frame.size.height - 1,tetField.frame.size.width, 1.0f);
-    bottomBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:bottomBorder];
     
-    //left border
-    CALayer *leftBorder = [CALayer layer];
-    leftBorder.frame = CGRectMake(0,25,1,5);
-    leftBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:leftBorder];
-    
-    //right border
-    CALayer *rightBorder = [CALayer layer];
-    rightBorder.frame = CGRectMake(tetField.frame.size.width - 1,25,1,5);
-    rightBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:rightBorder];
-}
-
-+(void)setTextField_BottomBorder:(UITextField*)tetField color:(UIColor*)color str:(NSString *)str
-{
-    //Bottom border
-    
-    if ([str isEqualToString:@"Duration"])
-    {
-        CALayer *bottomBorder = [CALayer layer];
-        bottomBorder.frame = CGRectMake(0.0f, tetField.frame.size.height - 1,tetField.frame.size.width, 2.0f);
-        bottomBorder.backgroundColor = color.CGColor;
-        [tetField.layer addSublayer:bottomBorder];
-    }
-    else
-    {
-        CALayer *bottomBorder = [CALayer layer];
-        bottomBorder.frame = CGRectMake(0.0f, tetField.frame.size.height - 1,tetField.frame.size.width, 1.0f);
-        bottomBorder.backgroundColor = color.CGColor;
-        [tetField.layer addSublayer:bottomBorder];
-    }
     
 }
 
-+(void)setTextView_BottomBorder:(UITextView*)tetView color:(UIColor*)color
-{
-    //Bottom border
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.frame = CGRectMake(0.0f, tetView.frame.size.height - 1,tetView.frame.size.width, 1.0f);
-    bottomBorder.backgroundColor = color.CGColor;
-    [tetView.layer addSublayer:bottomBorder];
-}
-
-+(void)setTextField_PlaceholderColor:(UITextField*)textField text:(NSString*)text color:(UIColor*)color
-{
-    NSAttributedString *str = [[NSAttributedString alloc] initWithString:text attributes:@{ NSForegroundColorAttributeName : color }];
-    textField.attributedPlaceholder = str;
-}
-
-
-+(void)setTextFieldLeftRightBottom_lightGrayColor_Border:(UITextField*)tetField x:(float)x
-{
-    //Bottom border
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.frame = CGRectMake(0.0f, tetField.frame.size.height - 1,tetField.frame.size.width, 1.0f);
-    bottomBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:bottomBorder];
-    
-    //left border
-    CALayer *leftBorder = [CALayer layer];
-    leftBorder.frame = CGRectMake(0,25,1,5);
-    leftBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:leftBorder];
-    
-    //right border
-    CALayer *rightBorder = [CALayer layer];
-    rightBorder.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - x,25,1,5);
-    rightBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
-    [tetField.layer addSublayer:rightBorder];
-}
-
-+ (NSString *)getMilisecondToTime:(NSString *)timeStamp
-{
-    NSTimeInterval _interval=[timeStamp doubleValue];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:(_interval/1000)];
-    
-//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//    [dateFormat setDateFormat:@"dd/MM/yyyy"];
-//    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-//    [dateFormat setTimeZone:gmt];
-//    NSString *DateAgo = [dateFormat stringFromDate:date];
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSDayCalendarUnit|NSWeekCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit|NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
-                                               fromDate:date
-                                                 toDate:[NSDate date]
-                                                options:0];
-    NSString *time;
-    if(components.day!=0)
-    {
-        if(components.day==1)
-        {
-            //time=[NSString stringWithFormat:@"%ld day",(long)components.day];
-            time=[NSString stringWithFormat:@"yesterday"];
-        }
-        else
-        {
-            NSTimeInterval _interval=[timeStamp doubleValue];
-            NSDate *date = [NSDate dateWithTimeIntervalSinceNow:(_interval/1000)];
-            
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-            [dateFormat setDateFormat:@"dd/MM/yyyy"];
-            NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-            [dateFormat setTimeZone:gmt];
-            NSString *DateAgo = [dateFormat stringFromDate:date];
-
-            time=[NSString stringWithFormat:@"%@",DateAgo];
-        }
-    }
-    else
-    {
-        if(components.minute > 0)
-        {
-            time=[NSString stringWithFormat:@"%ld:%ld",(long)components.hour,(long)components.minute];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"just now"];
-        }
-    }
-
-    
-    return time;
-}
-
-+ (NSString *)getDateStringForDate_status:(NSString *)timeStamp
-{
-    NSTimeInterval _interval=[timeStamp doubleValue];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:(_interval/1000)];
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd/MM/yyyy"];
-    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-    [dateFormat setTimeZone:gmt];
-    NSString *DateAgo = [dateFormat stringFromDate:date];
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSDayCalendarUnit|NSWeekCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit|NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
-                                               fromDate:date
-                                                 toDate:[NSDate date]
-                                                options:0];
-    NSString *time;
-    /*if(components.year!=0)
-    {
-        if(components.year==1)
-        {
-            time=[NSString stringWithFormat:@"%ld year",(long)components.year];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld years",(long)components.year];
-        }
-    }
-    else if(components.month!=0)
-    {
-        if(components.month==1)
-        {
-            time=[NSString stringWithFormat:@"%ld month",(long)components.month];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld months",(long)components.month];
-        }
-    }
-    else if(components.week!=0)
-    {
-        if(components.week==1)
-        {
-            time=[NSString stringWithFormat:@"%ld week",(long)components.week];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld weeks",(long)components.week];
-        }
-    }
-    else*/
-        
-    if(components.day!=0)
-    {
-        if(components.day==1)
-        {
-            //time=[NSString stringWithFormat:@"%ld day",(long)components.day];
-            time=[NSString stringWithFormat:@"yesterday"];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%@",DateAgo];
-        }
-    }
-    else if(components.hour!=0)
-    {
-        if(components.hour==1)
-        {
-            time=[NSString stringWithFormat:@"%ld hour ago",(long)components.hour];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld hours ago",(long)components.hour];
-        }
-    }
-    else if(components.minute!=0)
-    {
-        if(components.minute==1)
-        {
-            time=[NSString stringWithFormat:@"%ld min ago",(long)components.minute];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld mins ago",(long)components.minute];
-        }
-    }
-    else if(components.second>=0)
-    {
-        if(components.second < 10)
-        {
-            time=[NSString stringWithFormat:@"just now"];
-        }
-        else
-        {
-            time=[NSString stringWithFormat:@"%ld secs ago",(long)components.second];
-        }
-    }
-    return [NSString stringWithFormat:@"%@",time];
-}
-/*+ (NSString *)getDateStringForDate_status:(NSString *)timeStamp
-{
-    NSTimeInterval _interval=[timeStamp doubleValue];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:(_interval/1000)];
-    
-    NSCalendarUnit units = NSCalendarUnitDay | NSCalendarUnitWeekOfYear |
-    NSCalendarUnitMonth | NSCalendarUnitYear;
-    
-    // if `date` is before "now" (i.e. in the past) then the components will be positive
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:units
-                                                                   fromDate:date
-                                                                     toDate:[NSDate date]
-                                                                    options:0];
-    
-    if (components.year > 0)
-    {
-        return [NSString stringWithFormat:@"%ld years ago", (long)components.year];
-    }
-    else if (components.month > 0)
-    {
-        return [NSString stringWithFormat:@"%ld months ago", (long)components.month];
-    }
-    else if (components.weekOfYear > 0)
-    {
-        return [NSString stringWithFormat:@"%ld weeks ago", (long)components.weekOfYear];
-    }
-    else if (components.day > 0)
-    {
-        if (components.day > 1)
-        {
-            return [NSString stringWithFormat:@"%ld days ago", (long)components.day];
-        }
-        else
-        {
-            return @"Yesterday";
-        }
-    }
-    else
-    {
-        NSLog(@"%ld-%ld-%ld",(long)components.day,(long)components.month,(long)components.year);
-        return @"Today";
-    }
-}
-*/
 #pragma mark - TextField View
 
 +(void)setLetfAndRightViewOfTextField:(UITextField *)txtField leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName{
@@ -552,38 +278,9 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 + (BOOL)validateEmailWithString:(NSString*)email
 {
-  //  validateEmailWithString
-    //
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-       NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    
-   // NSString *emailRegex = @"[A-Z0-9a-z]([A-Z0-9a-z._-]{0,64})+[A-Z0-9a-z]+@[A-Z0-9a-z]+([A-Za-z0-9.-]{0,64})+([A-Z0-9a-z])+\\.[A-Za-z]{2,4}";
-   // NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
-   // return ([emailPredicate evaluateWithObject:self.text] && self.text.length <= 64 && ([self.text rangeOfString:@".."].location == NSNotFound));
-    
-    /*NSString *emailRegEx =
-    @"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
-    @"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
-    @"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
-    @"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
-    @"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
-    @"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
-    @"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";*/
-    
-    
-   // NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
-    
-  //  NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
-    
-   // NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-   // NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-   // return [emailTest evaluateWithObject:checkString];
-    
- 
-    //NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
-    //return [emailTest evaluateWithObject:email];
 }
 
 
@@ -621,7 +318,8 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     NSString *value = [string stringByTrimmingCharactersInSet:[NSCharacterSet  whitespaceCharacterSet]];
     
-    if([value length]  > 0) {
+    if([value length]  > 0)
+    {
         return NO;
     }
     
@@ -656,7 +354,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     NSString *value = [string stringByTrimmingCharactersInSet:[NSCharacterSet  whitespaceCharacterSet]];
     
-    if([value length] >= 4 && [value length] <= 10) {
+    if([value length] >= 6 && [value length] <= 30) {
         return YES;
     }
     
@@ -772,11 +470,6 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 #pragma mark - DateFormate
 
-+(NSString *) getTimeStamp
-{
-    return [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000];
-}
-
 +(NSString*)ChangeDateformate:(NSString *)strDate oldDateFtm:(NSString *)strOldDateFtm newDateFtm:(NSString *)strNewDateFtm
 {
     NSString *strUpdated_date=strDate;
@@ -853,7 +546,17 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 
 #pragma mark - Interner connection active or not
-
++(BOOL)isInterNetConnectionIsActive{
+    
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable)
+    {
+        NSLog(@"There IS NO internet connection");
+        return NO;
+    }
+    return YES;
+}
 
 
 +(NSString *)imageToNSString:(UIImage *)image
@@ -911,81 +614,111 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     return newDate;
 }
 
+#pragma mark - UITableViewCell Popup
 
-
-#pragma mark - Api Function
-
-+(void)apicallforuploadimage:(NSString *)apiName image:(UIImage *)selectedimage parms:(NSMutableDictionary *)parms block:(void (^)(NSMutableDictionary *,NSError *))block{
-    NSData *imgdata = [[NSData alloc] init];
-    if(selectedimage == nil)
+/*+ (void)dismissAllPopTipViews : (NSMutableArray *)arr
+{
+    while ([arr count] > 0)
     {
+        CMPopTipView *popTipView = [arr objectAtIndex:0];
+        [popTipView dismissAnimated:YES];
+        [arr removeObjectAtIndex:0];
+    }
+}
+
++(UIView*)addCell_PopupView:(UIView *)viewCustome ParentView:(UIView*)ParentView sender:(id)sender
+{
+    CMPopTipView *popTipView;
+    if (viewCustome)
+    {
+        popTipView = [[CMPopTipView alloc] initWithCustomView:viewCustome];
+    }
+    popTipView.backgroundColor = [UIColor colorWithRed:34/255.0f green:49/255.0f blue:89/255.0f alpha:1.0f];
+    popTipView.borderColor=[UIColor colorWithRed:34/255.0f green:49/255.0f blue:89/255.0f alpha:1.0f];
+    popTipView.borderWidth=1.0f;
+    popTipView.cornerRadius=0;
+    popTipView.has3DStyle=NO;
+    popTipView.dismissTapAnywhere = YES;
+    //popTipView.dismissAlongWithUserInteraction=YES;
+    
+    if ([sender isKindOfClass:[UIButton class]])
+    {
+        UIButton *button = (UIButton *)sender;
+        [popTipView presentPointingAtView:button inView:ParentView animated:YES];
     }
     else
     {
-        imgdata=UIImageJPEGRepresentation(selectedimage, 1.0);
+        UIBarButtonItem *barButtonItem = (UIBarButtonItem *)sender;
+        [popTipView presentPointingAtBarButtonItem:barButtonItem animated:YES];
     }
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:apiName parameters:parms constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData)
-     {
-         if(imgdata != nil )
-         {
-             [formData appendPartWithFileData:imgdata
-                                         name:@"group_profile_picture"
-                                     fileName:@"group_profile_picture.png"
-                                     mimeType:@"png"];
-         }
-         
-         
-     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-         if (block) {
-             block(responseObject, nil);
-         }
-     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         if (block) {
-             block(nil, error);
-         }
-     }];
-}
+    return popTipView;
+}*/
 
+#pragma mark - Api Function
 
-+(void)PostApiCall:(NSString *)apiUrl params:(NSMutableDictionary *)param block:(void (^)(NSMutableDictionary *,NSError *))block
++(NSString *)getDataFrom:(NSString *)url
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-   // manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:[NSURL URLWithString:url]];
     
-    [manager POST:apiUrl parameters:param progress:nil success:^(NSURLSessionTask *task, id responseObject)
-     {
-         if (block) {
-             block(responseObject,nil);
-         }
-     } failure:^(NSURLSessionTask *operation, NSError *error) {
-         NSLog(@"Error: %@", error);
-         NSMutableDictionary * jsonData1  = [[NSMutableDictionary alloc]init];
-         if (block) {
-             block(jsonData1,error);
-         }
-     }];
+    NSError *error = nil;
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200)
+    {
+        NSLog(@"Error getting %@, HTTP status code %li", url, (long)[responseCode statusCode]);
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
 }
 
-+(void)PostApiCall_AfterTenSec:(NSString *)apiUrl params:(NSMutableDictionary *)param block:(void (^)(NSMutableDictionary *,NSError *))block
-{
+
++(void)PostApiCall:(NSString *)apiUrl params:(NSMutableDictionary *)param block:(void (^)(NSMutableDictionary *,NSError *))block{
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:apiUrl parameters:param progress:nil success:^(NSURLSessionTask *task, id responseObject)
-     {
-         if (block) {
-             block(responseObject,nil);
-         }
-     } failure:^(NSURLSessionTask *operation, NSError *error) {
-         NSLog(@"Error: %@", error);
-         NSMutableDictionary * jsonData1  = [[NSMutableDictionary alloc]init];
-         if (block) {
-             block(jsonData1,error);
-         }
-     }];
+    NSURL *urlLoginAuthentication= [NSURL URLWithString:apiUrl];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:urlLoginAuthentication];
+    [request setHTTPMethod:@"POST"];
     
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:param options:kNilOptions error:nil];
+    
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    [request setTimeoutInterval:150000];
+    [request setValue:@"json" forHTTPHeaderField:@"dataType"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody: jsonData];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if(!error)
+            {
+                
+                NSMutableDictionary * jsonData  = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                if (block) {
+                    block(jsonData,nil);
+                }
+            }
+            else
+            {
+                NSMutableDictionary * jsonData  = [[NSMutableDictionary alloc]init];
+                //NSLog(@"data=%@",jsonData);
+                
+                if (block) {
+                    block(jsonData,error);
+                }
+            }
+        });
+    }] resume];
 }
+
 +(NSString *)Convertjsontostring:(NSMutableDictionary *)dictonary;
 {
     NSError *error;
@@ -1003,12 +736,111 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 +(NSMutableDictionary *)ConvertStringtoJSON:(NSString *)jsonStr;
 {
-    NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
-    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    return json;
+    NSString *strJs= [NSString stringWithFormat:@"%@",jsonStr];
+    if ([strJs isEqualToString:@"<null>"] || strJs == nil || strJs.length == 0)
+    {
+        
+    }
+    else
+    {
+        NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        return json;
+    }
+    return nil;
 }
 
+/*+(NSMutableDictionary *)getCurrentUserDetail
+{
+    //NSArray *jsonStr=[DBOperation selectData:[NSString stringWithFormat:@"select JsonStr from CurrentActiveUser"]];
+    NSData *data;
+    
+    
+    NSMutableArray *ary = [DBOperation selectData:@"Select * from CurrentActiveUser"];
+    
+    //Select * from CurrentActiveUser
+    
+    //NSLog(@"ary=%@",ary);
+    
+   // NSLog(@"***********************************************************");
+    
+    if([ary count] != 0)
+    {
+        data= [[[ary objectAtIndex:0]objectForKey:@"JsonStr"]  dataUsingEncoding:NSUTF8StringEncoding];
+        
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithDictionary:json];
+        
+        return dic;
+        
+        //return json;
+    }
+    
+    NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
+    return dic;
+}
+
++(NSString *)getCurrentUserName
+{
+    NSArray *jsonStr=[DBOperation selectData:[NSString stringWithFormat:@"select JsonStr from CurrentActiveUser"]];
+    NSData *data;
+    
+    if([jsonStr count] != 0)
+    {
+        data= [[[jsonStr objectAtIndex:0]objectForKey:@"JsonStr"]  dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSString *strName = [json objectForKey:@"FullName"];
+    NSArray *aryName = [strName componentsSeparatedByString:@" "];
+    NSString *str = [aryName objectAtIndex:0];
+    
+    return str;
+}
+
++(NSString *)getMemberType
+{
+    NSArray *jsonStr=[DBOperation selectData:[NSString stringWithFormat:@"select JsonStr from CurrentActiveUser"]];
+    NSData *data;
+    
+    if([jsonStr count] != 0)
+    {
+        data= [[[jsonStr objectAtIndex:0]objectForKey:@"JsonStr"]  dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSString *getMemberType = [json valueForKey:@"MemberType"];
+    
+    return getMemberType;
+}
+
++(NSString *)getCurrentUserType
+{
+    NSArray *jsonStr=[DBOperation selectData:[NSString stringWithFormat:@"select userType_responce from CurrentActiveUser"]];
+    NSString *strUserType;
+    
+    if([jsonStr count] != 0)
+    {
+        strUserType = [[jsonStr objectAtIndex:0]objectForKey:@"userType_responce"];
+    }
+    
+    return strUserType;
+}
+
++(NSString *)getUserRoleRightList :(NSString *)strRightName settingType:(NSString *)strSettingType
+{
+    NSMutableArray *arrGetUserRoleRightList = [DBOperation selectData:[NSString stringWithFormat:@"select %@ from GetUserRoleRightList where RightName = '%@'",strSettingType,strRightName]];
+    if ([arrGetUserRoleRightList count] != 0)
+    {
+        NSString *IsSetting=[[arrGetUserRoleRightList objectAtIndex:0]objectForKey:strSettingType];
+        return IsSetting;
+    }
+    return @"1";
+}
+*/
 +(NSMutableArray *)getLocalDetail : (NSArray *)jsonstr columnKey:(NSString *)columnKey
 {
     NSData *data;
@@ -1032,17 +864,6 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 +(NSString *)randomImageGenerator
 {
     return [NSString stringWithFormat:@"%.0f",[[NSDate date] timeIntervalSince1970] * 1000];
-}
-
-+(NSString *) randomStringWithLength: (int) len {
-    
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
-    
-    for (int i=0; i<len; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length])]];
-    }
-    
-    return randomString;
 }
 
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize isAspectRation:(BOOL)aspect
@@ -1177,9 +998,6 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 {
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary * dict = [userDefaults dictionaryRepresentation];
-    
-    
-    
     for (id key in dict)
     {
         NSLog(@"ALL keys=%@",key);
@@ -1190,6 +1008,10 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
             
         }
         else if ([key isEqualToString:@"MobileNumber"])
+        {
+            
+        }
+        else if([key isEqualToString:@"Language"])
         {
             
         }
@@ -1206,13 +1028,251 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
 }
 
-/*+(UIColor *)colorFromHexString:(NSString *)hexString
+/*+(void)DeleteAllSqliteTable
 {
-    unsigned rgbValue = 0;
-    NSScanner *scanner = [NSScanner scannerWithString:hexString];
-    [scanner setScanLocation:1]; // bypass '#' character
-    [scanner scanHexInt:&rgbValue];
-    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
+    [DBOperation executeSQL:@"delete from BlogDetail"];
+    
+    [DBOperation executeSQL:@"delete from CircularList"];
+    
+    [DBOperation executeSQL:@"delete from ClassWorkList"];
+    
+    [DBOperation executeSQL:@"delete from CurrentActiveUser"];
+    
+    [DBOperation executeSQL:@"delete from DynamicWall"];
+    
+    [DBOperation executeSQL:@"delete from DynamicWallMenuList"];
+    
+    [DBOperation executeSQL:@"delete from FriendList"];
+    
+    [DBOperation executeSQL:@"delete from FriendRequestList"];
+    
+    [DBOperation executeSQL:@"delete from GeneralWall"];
+    
+    [DBOperation executeSQL:@"delete from GetUserRoleRightList"];
+    
+    [DBOperation executeSQL:@"delete from HomeWorkList"];
+    
+    [DBOperation executeSQL:@"delete from InstituteWall"];
+    
+    [DBOperation executeSQL:@"delete from LeaveDetailList"];
+    
+    [DBOperation executeSQL:@"delete from Login"];
+    
+    [DBOperation executeSQL:@"delete from MyWall"];
+    
+    [DBOperation executeSQL:@"delete from PTCommunicationList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoAlbumList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoAlbumSaveMultipleImage"];
+    
+    [DBOperation executeSQL:@"delete from PhotoList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoMultipleAlbumList"];
+    
+    [DBOperation executeSQL:@"delete from PollAddPage"];
+    
+    [DBOperation executeSQL:@"delete from PollParticipantPage"];
+    
+    [DBOperation executeSQL:@"delete from PollParticipantPage_Votelist"];
+    
+    [DBOperation executeSQL:@"delete from ProfileHappyGramList"];
+    
+    [DBOperation executeSQL:@"delete from ProfileInstitutePage"];
+    
+    [DBOperation executeSQL:@"delete from ProfileLeaveList"];
+    
+    [DBOperation executeSQL:@"delete from ProjectList"];
+    
+    [DBOperation executeSQL:@"delete from SchoolGroupList"];
+    
+    [DBOperation executeSQL:@"delete from SelectionList"];
+    
+    [DBOperation executeSQL:@"delete from Setting"];
+    
+    [DBOperation executeSQL:@"delete from StudentList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherDivisionList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherStandardList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherSubjectList"];
+    
+    [DBOperation executeSQL:@"delete from VideoList"];
+    
+    [DBOperation executeSQL:@"delete from newPost"];
+    
+    [DBOperation executeSQL:@"delete from NotificationList"];
+    
+    [DBOperation executeSQL:@"delete from ExamTiming"];
+    
+    [DBOperation executeSQL:@"delete from TimeTable"];
+    
+    [DBOperation executeSQL:@"delete from NotList"];
+    
+    [DBOperation executeSQL:@"delete from Holiday"];
+    
+    [DBOperation executeSQL:@"delete from CalenderList"];
+    
+}
+
++(void)DeleteAllSqliteTable1
+{
+    [DBOperation executeSQL:@"delete from BlogDetail"];
+    
+    [DBOperation executeSQL:@"delete from CircularList"];
+    
+    [DBOperation executeSQL:@"delete from ClassWorkList"];
+    
+   // [DBOperation executeSQL:@"delete from CurrentActiveUser"];
+    
+    [DBOperation executeSQL:@"delete from DynamicWall"];
+    
+    [DBOperation executeSQL:@"delete from DynamicWallMenuList"];
+    
+    [DBOperation executeSQL:@"delete from FriendList"];
+    
+    [DBOperation executeSQL:@"delete from FriendRequestList"];
+    
+    [DBOperation executeSQL:@"delete from GeneralWall"];
+    
+    [DBOperation executeSQL:@"delete from GetUserRoleRightList"];
+    
+    [DBOperation executeSQL:@"delete from HomeWorkList"];
+    
+    [DBOperation executeSQL:@"delete from InstituteWall"];
+    
+    [DBOperation executeSQL:@"delete from LeaveDetailList"];
+    
+    [DBOperation executeSQL:@"delete from Login"];
+    
+    [DBOperation executeSQL:@"delete from MyWall"];
+    
+    [DBOperation executeSQL:@"delete from PTCommunicationList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoAlbumList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoAlbumSaveMultipleImage"];
+    
+    [DBOperation executeSQL:@"delete from PhotoList"];
+    
+    [DBOperation executeSQL:@"delete from PhotoMultipleAlbumList"];
+    
+    [DBOperation executeSQL:@"delete from PollAddPage"];
+    
+    [DBOperation executeSQL:@"delete from PollParticipantPage"];
+    
+    [DBOperation executeSQL:@"delete from PollParticipantPage_Votelist"];
+    
+    [DBOperation executeSQL:@"delete from ProfileHappyGramList"];
+    
+    [DBOperation executeSQL:@"delete from ProfileInstitutePage"];
+    
+    [DBOperation executeSQL:@"delete from ProfileLeaveList"];
+    
+    [DBOperation executeSQL:@"delete from ProjectList"];
+    
+    [DBOperation executeSQL:@"delete from SchoolGroupList"];
+    
+    [DBOperation executeSQL:@"delete from SelectionList"];
+    
+    [DBOperation executeSQL:@"delete from Setting"];
+    
+    [DBOperation executeSQL:@"delete from StudentList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherDivisionList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherStandardList"];
+    
+    [DBOperation executeSQL:@"delete from TeacherSubjectList"];
+    
+    [DBOperation executeSQL:@"delete from VideoList"];
+    
+    [DBOperation executeSQL:@"delete from newPost"];
+    
+    [DBOperation executeSQL:@"delete from NotificationList"];
+    
+    [DBOperation executeSQL:@"delete from ExamTiming"];
+    
+    [DBOperation executeSQL:@"delete from TimeTable"];
+    
+    [DBOperation executeSQL:@"delete from NotList"];
+    
+    [DBOperation executeSQL:@"delete from Holiday"];
+    
+    [DBOperation executeSQL:@"delete from CalenderList"];
+    
 }*/
+
+
+#pragma mark - notification 
++(void)NotificationTesting
+{
+}
+/*+(void)DisablePanGesture
+{
+    REFrostedViewController *fr = [[REFrostedViewController alloc]init];
+    
+    fr.panGestureEnabled = false;
+}*/
+
+/*+(NSString*) languageSelectedStringForKey:(NSString *)key selectedLanguage:(int)selectedLanguage
+{
+    //en.lproj
+    //fr.lproj
+    //hi.lproj
+    //gu.lproj
+    
+    //NSString *path;
+    // path = [[NSBundle mainBundle] pathForResource:@"gu" ofType:@"lproj"];
+    //NSString *str = [NSString stringWithFormat:@"%@/localizationGuj.strings",path];
+    //  NSDictionary *localisationDict = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/%@localizationEng.strings",path]];
+    // NSLog(@"\n %@",localisationDict);
+    // NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:str];
+    
+    NSString *path;
+    NSString *fname;
+    if(selectedLanguage==ENGLSIH_LANGUAGE)
+    {
+        path = [[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"];
+        fname = [NSString stringWithFormat:@"%@/LocalizationEnglish.strings",path];
+    }
+    else if(selectedLanguage==GUJARATI_LANGUAGE)
+    {
+        //NSLog(@"KEY=%@",key);
+        path = [[NSBundle mainBundle] pathForResource:@"gu" ofType:@"lproj"];
+        fname = [NSString stringWithFormat:@"%@/LocalizationGujrati.strings",path];
+    }
+    else if(selectedLanguage==HINDI_LANGUAGE)
+    {
+        path = [[NSBundle mainBundle] pathForResource:@"hi" ofType:@"lproj"];
+        fname = [NSString stringWithFormat:@"%@/LocalizationHindi.strings",path];
+    }
+    else
+    {
+        path = [[NSBundle mainBundle] pathForResource:@"fr" ofType:@"lproj"];
+        fname = [NSString stringWithFormat:@"%@/LocalizationFrench.strings",path];
+    }
+    NSDictionary *localisationDict = [NSDictionary dictionaryWithContentsOfFile:fname];
+   // NSLog(@"\n %@",[localisationDict objectForKey:key]);
+    
+    NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:fname];
+    NSString *loc = [d objectForKey:key];
+    
+    //NSLog(@"Dattaa=%@",loc);
+    // NSString* str=[languageBundle localizedStringForKey:key value:@"" table:@"Localization.strings"];
+    
+    return loc;
+    
+}*/
+
++(void)valueCheckforERP : (NSString *)strValue
+{
+  
+}
 
 @end

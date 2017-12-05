@@ -9,36 +9,64 @@
 #ifndef Globle_h
 #define Globle_h
 
-//thirdParty
+
 
 
 //viewcontroller
 
 #import "Utility.h"
+#import "HomeVC.h"
+#import "loginVc.h"
+#import "UnitAvailabilityListVC.h"
+#import "UnitAvailabilityDetailVC.h"
 
-//UITableView
+//UITableView cell
+
+//collection cell
+
+#import "CellUnitDetail.h"
 
 
-///// in built
+/// framework
 
 #import <CoreGraphics/CoreGraphics.h>
 
 #pragma mark - API
 
-#define BASE_URL @"http://symphonyirms.softcube.in/Services/apk_Booking.asmx"
+#define BASE_URL @"http://symphonyirms.softcube.in/Services"
+
 #define IMAGE_BASE_URL @""
 
 
 #pragma mark - Method
 
-#define GetList @"GetAllBookingList"
+#define GetList @"/apk_Booking.asmx/GetUnitAvailabilityList"
+#define LOGIN @"/apk_Login.asmx/Login"
+#define GETUNITAVALIBILTY @"/apk_Booking.asmx/GetAllBookingList"
+//thirdParty
 
-
-#import "UITextView+Placeholder.h"
 #import <AFNetworking.h>
 #import <RealReachability.h>
+#import "WToast.h"
+#import <FTToastIndicator.h>
+#import <AFNetworking.h>
+#import <RealReachability.h>
+#import <IQKeyboardManager.h>
+#import <FTProgressIndicator.h>
+#import <FTToastIndicator.h>
+#import <FTIndicator.h>
+#import "Reachability.h"
 
-
+/*
+ 
+ pod 'AFNetworking', '~> 3.0'
+ pod 'MBProgressHUD', '~> 1.1.0'
+ pod 'ActionSheetPicker-3.0', '~> 2.2.0'
+ pod 'RealReachability'
+ pod 'IQKeyboardManager'
+ pod 'FTIndicator'
+ end
+ */
 //AddEditBooking
 //GetUnitAvailabilityList
 //GetCurrentMonthBookingList
@@ -60,5 +88,6 @@
 #pragma mark - validation
 
 #define INTERNET @"No internet connection.."
+#define NODATA @"No data available.."
 
 #endif /* Globle_h */

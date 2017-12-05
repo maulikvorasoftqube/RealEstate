@@ -31,6 +31,6 @@
 - (IBAction)btnBooking:(id)sender;
 - (IBAction)btnCollection:(id)sender;
 - (IBAction)btnDocument:(id)sender;
-
+@property (strong,nonatomic)NSString *strProperty;
 
 @end

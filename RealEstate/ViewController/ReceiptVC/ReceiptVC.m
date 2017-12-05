@@ -8,6 +8,7 @@
 
 #import "ReceiptVC.h"
 #import "UnitDetailList_CollectionCell.h"
+#import "Globle.h"
 
 @interface ReceiptVC ()
 
@@ -35,7 +36,75 @@
     self.btnSave.layer.cornerRadius=4;
     self.btnSave.clipsToBounds=YES;
     
+    self.tblSelectUnitList_Height.constant=0;
     
+    [Utility setRightViewOfTextField:self.txtbtnProperty rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtbtnSelectUnit rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtSelectDate rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtPaymentMode rightImageName:@"down_arrow"];
+    
+    self.tblSelectUnit.layer.borderWidth=1;
+    self.tblSelectUnit.layer.borderColor=[UIColor lightGrayColor].CGColor;
+    self.tblSelectUnit.layer.cornerRadius=4;
+    self.tblSelectUnit.clipsToBounds=YES;
+
+    self.tblSelectUnit.separatorStyle =UITableViewCellSeparatorStyleNone;
+
+}
+
+#pragma mark - UITextField Delegate
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    self.tblSelectUnitList_Height.constant=0;
+    return YES;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.tblSelectUnitList_Height.constant=0;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    
+    /*NSString *searchString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.item_name CONTAINS[c] %@", searchString];
+     NSArray *filteredArray = [arrMainItem filteredArrayUsingPredicate:predicate];
+     arrItemList=[filteredArray mutableCopy];*/
+    self.tblSelectUnitList_Height.constant=120;
+    
+    
+    return YES;
+}
+
+
+#pragma mark - UITableView Delegate
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell=(UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell_row"];
+    
+    if(indexPath.row % 2)
+    {
+        cell.contentView.backgroundColor=[UIColor whiteColor];
+    }
+    else
+    {
+        cell.contentView.backgroundColor=[UIColor groupTableViewBackgroundColor];
+    }
+    
+    cell.textLabel.text=[NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 #pragma mark - UICollectionView Delegate Method

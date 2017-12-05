@@ -18,6 +18,6 @@
 
 //
 @property (strong, nonatomic) IBOutlet UITableView *tblUnitList;
-
+@property (strong,nonatomic)NSString *strPropertyID;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AddBookingVC.h"
 #import "UnitPrice_TblCellVC.h"
+#import "Globle.h"
 
 @interface AddBookingVC ()
 
@@ -43,6 +44,13 @@
     
     self.tblCustomerNameList.separatorStyle =UITableViewCellSeparatorStyleNone;
     self.tblUnitPriceList.separatorStyle =UITableViewCellSeparatorStyleNone;
+    
+    [Utility setRightViewOfTextField:self.txtSelectProperty rightImageName:@"down_arrow"];
+    
+    [Utility setRightViewOfTextField:self.txtSelectBlock rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtSelectUnit rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtSelectdateofbooking rightImageName:@"down_arrow"];
+    [Utility setRightViewOfTextField:self.txtSelectCustomerName rightImageName:@"down_arrow"];
 }
 
 #pragma mark - UITextField Delegate

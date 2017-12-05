@@ -14,11 +14,15 @@
 - (IBAction)btnHome:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_list;
+@property (strong, nonatomic) IBOutlet UILabel *lbHeaderTitle;
 
 @property (strong, nonatomic) IBOutlet UIView *viewDetail_popup;
 - (IBAction)btnCloseDetail_Popup:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UILabel *lblName_Detail_popup;
 @property (strong, nonatomic) IBOutlet UILabel *lblMobilenumber_Detail_popup;
+@property (strong,nonatomic)NSMutableDictionary *dicDetails;
+@property (strong,nonatomic)NSString *strWingID;
+@property (strong,nonatomic)NSString *strWingNAME;
 
 @end

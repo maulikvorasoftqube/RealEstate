@@ -40,4 +40,8 @@
 - (IBAction)btnHome:(id)sender;
 - (IBAction)btnBack:(id)sender;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *tblSelectUnitList_Height;//150
+@property (strong, nonatomic) IBOutlet UITableView *tblSelectUnit;
+
+
 @end

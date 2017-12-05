@@ -7,6 +7,7 @@
 //
 
 #import "HomeVC.h"
+#import "Globle.h"
 
 @interface HomeVC ()
 
@@ -23,7 +24,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
 
 #pragma mark - Count Action
 
@@ -40,9 +44,11 @@
 
 #pragma mark - Action
 
-- (IBAction)btnUnitAvailability:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"UnitAvailabilityListVC"];
-    [self.navigationController pushViewController:vc animated:YES];
+- (IBAction)btnUnitAvailability:(id)sender
+{
+    UnitAvailabilityListVC *unit = [self.storyboard instantiateViewControllerWithIdentifier:@"UnitAvailabilityListVC"];
+    unit.strPropertyID = _strProperty;
+    [self.navigationController pushViewController:unit animated:YES];
 }
 
 - (IBAction)btnReceipt:(id)sender {
@@ -51,6 +57,8 @@
 }
 
 - (IBAction)btnPayOut:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnCustomer:(id)sender {
@@ -64,9 +72,14 @@
 }
 
 - (IBAction)btnCollection:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnDocument:(id)sender {
+    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"DocumentListVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 @end

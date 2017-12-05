@@ -8,10 +8,13 @@
 
 #import "UnitAvailabilityListVC.h"
 #import "Globle.h"
+#import "Reachability.h"
 
 @interface UnitAvailabilityListVC ()
 {
     NSMutableArray *aryGetList;
+    NSMutableDictionary *getAllDetailData;
+    NSMutableDictionary *dicRes;
 }
 @end
 
@@ -22,6 +25,8 @@
     [super viewDidLoad];
     
     aryGetList = [[NSMutableArray alloc]init];
+    getAllDetailData = [[NSMutableDictionary alloc]init];
+    dicRes = [[NSMutableDictionary alloc]init];
     
     [self commonData];
 }
@@ -38,17 +43,20 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self getList];
+}
 #pragma mark - UITableView Delegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return aryGetList.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell=(UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell_unitlist"];
-    
     
     if(indexPath.row % 2)
     {
@@ -59,15 +67,27 @@
         cell.contentView.backgroundColor=[UIColor groupTableViewBackgroundColor];
     }
     
-    //UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:1];
- //   UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:2];
+    UILabel *lbl=(UILabel*)[cell.contentView viewWithTag:1];
+    lbl.text = [NSString stringWithFormat:@"%@",[[aryGetList objectAtIndex:indexPath.row]objectForKey:@"WingName"]];
+    
+    UILabel *lbl1=(UILabel*)[cell.contentView viewWithTag:2];
+    lbl1.text = [NSString stringWithFormat:@"%@",[[aryGetList objectAtIndex:indexPath.row]objectForKey:@"NoOfUnits"]];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"UnitAvailabilityDetailVC"];
+    /*
+     @property (strong,nonatomic)NSMutableDictionary *dicDetails;
+     @property (strong,nonatomic)NSString *strWingID;
+     */
+    
+    UnitAvailabilityDetailVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"UnitAvailabilityDetailVC"];
+    
+    vc.strWingID = [NSString stringWithFormat:@"%@",[[aryGetList objectAtIndex:indexPath.row]objectForKey:@"WingID"]];
+    vc.strWingNAME = [NSString stringWithFormat:@"%@",[[aryGetList objectAtIndex:indexPath.row]objectForKey:@"WingName"]];
+    vc.dicDetails = [dicRes mutableCopy];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -92,27 +112,41 @@
         return;
     }
     
-    NSString *strURL = [NSString stringWithFormat:@"%@/%@",BASE_URL,GetList];
+    NSString *strURL = [NSString stringWithFormat:@"%@%@",BASE_URL,GetList];
 
-    [Utility PostApiCall:strURL params:nil block:^(NSMutableDictionary *dicResponce, NSError *error)
+    [FTIndicator showProgressWithMessage:nil userInteractionEnable:YES];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:_strPropertyID forKey:@"PropertyID"];
+
+    [Utility PostApiCall:strURL params:dic block:^(NSMutableDictionary *dicResponce, NSError *error)
      {
-        // [FTIndicator dismissProgress];
+         [FTIndicator dismissProgress];
          
-         NSLog(@"datata=%@",dicResponce);
-         
-        //aryGetList
-         
-      /*   if ([[dicResponce objectForKey:@"status"]intValue] == 1)
+         if (!error)
          {
-             UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:SUCCESSMSG delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-             [alrt show];
+             NSString *strJson = [dicResponce objectForKey:@"d"];
+             dicRes =  [Utility ConvertStringtoJSON:strJson];
+             getAllDetailData = [dicRes mutableCopy];
+             
+             aryGetList = [dicRes objectForKey:@"Table"];
+             NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                                 sortDescriptorWithKey:@"WingName"
+                                                 ascending:YES];
+             NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+             NSArray *sortedEventArray = [aryGetList
+                                sortedArrayUsingDescriptors:sortDescriptors];
+             aryGetList = [sortedEventArray mutableCopy];
+             
+             [_tblUnitList reloadData];
          }
          else
          {
-             UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:VALIDEMAIL delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             UIAlertView *alrt = [[UIAlertView alloc]initWithTitle:nil message:NODATA delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
              [alrt show];
-         }*/
-         
+             return;
+         }
+
      }];
     
 }
