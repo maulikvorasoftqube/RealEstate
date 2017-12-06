@@ -47,6 +47,26 @@
     
     arrDocumentType=[self.arrDocType mutableCopy];
     arrCustomerName=[self.arrCusType mutableCopy];
+    
+    if(self.dicSelectedDoc != nil)
+    {
+        [self.btnSelectCustomerName setUserInteractionEnabled:NO];
+        [self.btnUploadImage setAttributedTitle:nil forState:UIControlStateNormal];
+        
+        strSelectCustomerId=[self.dicSelectedDoc objectForKey:@"InvestorID"];
+        strSelectDocumentId=[self.dicSelectedDoc objectForKey:@"DocumentTypeID"];
+        
+        self.txtSelectCustomerName.text=[self.dicSelectedDoc objectForKey:@"FullName"];
+        self.txtSelectDocumentType.text=[self.dicSelectedDoc objectForKey:@"DocumentType"];
+        
+        NSString *DocumentName=[self.dicSelectedDoc objectForKey:@"DocumentName"];
+        UIImageView *imgDoc=[[UIImageView alloc]init];
+        [imgDoc setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,DocumentName]]] placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+            [self.btnUploadImage setBackgroundImage:image forState:UIControlStateNormal];
+        } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        }];
+        
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -55,8 +75,6 @@
 }
 
 #pragma mark - Api call for
-
-
 
 -(void)apiCall_AddEditDocument
 {
@@ -76,7 +94,14 @@
     [FTIndicator showProgressWithMessage:nil userInteractionEnable:YES];
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
-    [dic setObject:@"" forKey:@"DocumentID"];
+    if(self.dicSelectedDoc != nil)
+    {
+        [dic setObject:[self.dicSelectedDoc objectForKey:@"DocumentID"] forKey:@"DocumentID"];
+    }
+    else
+    {
+        [dic setObject:@"" forKey:@"DocumentID"];
+    }
     [dic setObject:strSelectCustomerId forKey:@"InvestorID"];
     [dic setObject:strSelectDocumentId forKey:@"TermID"];
     [dic setObject:self.txtSelectDocumentType.text forKey:@"Term"];

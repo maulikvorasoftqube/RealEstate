@@ -47,9 +47,17 @@
 
 //mac0001
 
+
 #define GetAllDocuments @"/apk_Documents.asmx/GetAllDocuments"
 #define OtherOptions @"/apk_Documents.asmx/OtherOptions"
 #define AddEditDocument @"/apk_Documents.asmx/AddEditDocument"
+
+
+#define GetAllOptions @"/apk_Login.asmx/GetAllOptions"
+
+#define GetCustomerByUnitNo @"/apk_payment.asmx/GetCustomerByUnitNo"
+
+
 
 //=======
 

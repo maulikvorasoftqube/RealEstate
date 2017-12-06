@@ -47,7 +47,7 @@
 - (IBAction)btnUnitAvailability:(id)sender
 {
     UnitAvailabilityListVC *unit = [self.storyboard instantiateViewControllerWithIdentifier:@"UnitAvailabilityListVC"];
-    unit.strPropertyID = _strProperty;
+    unit.strPropertyID = [[NSUserDefaults standardUserDefaults]objectForKey:@"PropertyID"];
     [self.navigationController pushViewController:unit animated:YES];
 }
 

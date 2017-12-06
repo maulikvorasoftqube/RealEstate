@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
-@interface ReceiptVC : UIViewController
+@interface ReceiptVC : UIViewController<NIDropDownDelegate>
+{
+    NIDropDown *dropDown;
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *txtbtnProperty;
 @property (strong, nonatomic) IBOutlet UIButton *btnProperty;
@@ -20,7 +24,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *lblCustomerName;
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_UnitDeailList;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewUnitDetailList_Height;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewUnitDetailList_Height;//232
 
 @property (strong, nonatomic) IBOutlet UITextField *txtSelectDate;
 - (IBAction)btnSelectDate:(id)sender;
@@ -35,13 +39,23 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnSave;
 - (IBAction)btnSave:(id)sender;
 
-
-
 - (IBAction)btnHome:(id)sender;
 - (IBAction)btnBack:(id)sender;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *tblSelectUnitList_Height;//150
 @property (strong, nonatomic) IBOutlet UITableView *tblSelectUnit;
+
+
+//unitlist popup
+@property (strong, nonatomic) IBOutlet UIView *viewUnitList_Popup;
+@property (strong, nonatomic) IBOutlet UIView *viewInnerUnitList_Popup;
+@property (strong, nonatomic) IBOutlet UIButton *btnClose_UnitListPopup;
+- (IBAction)btnClose_UnitListPopup:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *txtSearchUnitList;
+@property (strong, nonatomic) IBOutlet UICollectionView *collection_UnitListPopup;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnContinue_UnitListPopup;
+- (IBAction)btnContinue_UnitListPopup:(id)sender;
 
 
 @end

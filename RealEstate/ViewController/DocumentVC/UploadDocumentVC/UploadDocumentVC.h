@@ -14,6 +14,8 @@
     NIDropDown *dropDown;
 }
 
+@property (strong, nonatomic) NSMutableDictionary *dicSelectedDoc;
+
 @property (strong, nonatomic) NSMutableArray *arrDocType;
 @property (strong, nonatomic) NSMutableArray *arrCusType;
 

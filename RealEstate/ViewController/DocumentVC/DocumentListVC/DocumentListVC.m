@@ -279,6 +279,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UploadDocumentVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"UploadDocumentVC"];
+    vc.dicSelectedDoc=[[[[arrDocumentList objectAtIndex:indexPath.section]objectForKey:@"arrRow"] objectAtIndex:indexPath.row]mutableCopy];
+    vc.arrDocType=[arrDocumentType mutableCopy];
+    vc.arrCusType=[arrCustomerName mutableCopy];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 #pragma mark - NIDropDown Delegate
