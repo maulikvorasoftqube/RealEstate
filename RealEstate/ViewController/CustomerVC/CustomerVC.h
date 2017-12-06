@@ -8,18 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomerVC : UIViewController
+@interface CustomerVC : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnHome:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UITextField *txtSearch;
-
-
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *tblCustomerList;
-
-
+@property (strong, nonatomic) IBOutlet UITextField *txtSearch;
+@property (strong,nonatomic)NSString *strCompnyID;
+@property (strong,nonatomic)NSString *strUserID;
 - (IBAction)btnAddNewCustomer:(id)sender;
 
 @end

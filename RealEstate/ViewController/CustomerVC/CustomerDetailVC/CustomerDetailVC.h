@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomerDetailVC : UIViewController
+@interface CustomerDetailVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *lbTotalAmountWidth;
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnHome:(id)sender;
 
@@ -23,5 +24,5 @@
 
 @property (strong, nonatomic) IBOutlet UIView *viewFooter;
 @property (strong, nonatomic) IBOutlet UILabel *lblHeader_TotalPaidAmount;
-
+@property (strong,nonatomic)NSMutableDictionary *DicCustomerDetail;
 @end

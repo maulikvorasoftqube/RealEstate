@@ -19,6 +19,9 @@
 #import "loginVc.h"
 #import "UnitAvailabilityListVC.h"
 #import "UnitAvailabilityDetailVC.h"
+#import "AddCustomerVC.h"
+#import "CustomerDetailVC.h"
+#import "CustomerVC.h"
 
 //UITableView cell
 
@@ -44,9 +47,9 @@
 #define LOGIN @"/apk_Login.asmx/Login"
 #define GetAllBookingList @"/apk_Booking.asmx/GetAllBookingList"
 
-
-//mac0001
-
+#define GetAllInvestors @"/apk_Investor.asmx/GetAllInvestors"
+#define GetInvestorDetails @"/apk_Investor.asmx/GetInvestorDetails"
+#define AddEditInvestor @"/apk_Investor.asmx/AddEditInvestor"
 
 #define GetAllDocuments @"/apk_Documents.asmx/GetAllDocuments"
 #define OtherOptions @"/apk_Documents.asmx/OtherOptions"
@@ -75,19 +78,11 @@
 #import <FTToastIndicator.h>
 #import <FTIndicator.h>
 #import "Reachability.h"
-
-
-//====MAC0001
 #import <UIImageView+AFNetworking.h>
 #import "NIDropDown.h"
-//
-
-
-
 
 
 /*
- 
  pod 'AFNetworking', '~> 3.0'
  pod 'MBProgressHUD', '~> 1.1.0'
  pod 'ActionSheetPicker-3.0', '~> 2.2.0'
@@ -95,7 +90,8 @@
  pod 'IQKeyboardManager'
  pod 'FTIndicator'
  end
- */
+*/
+
 //AddEditBooking
 //GetUnitAvailabilityList
 //GetCurrentMonthBookingList
@@ -117,6 +113,13 @@
 #pragma mark - validation
 
 #define INTERNET @"No internet connection.."
-#define NODATA @"No data available.."
+#define NODATA @"Try again.."
+#define NAME @"Please enter name.."
+#define MOBILENUMBER @"Please enter mobile number.."
+#define SELECTREF @"Please select reference name.."
+#define SELECTREFVALID @"Please select valid reference name.."
+#define IDPROOF @"Please select IDproof Photo.."
+#define SIGNATUREPIC @"Please select Signature Photo.."
+
 
 #endif /* Globle_h */

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddCustomerVC : UIViewController
+@interface AddCustomerVC : UIViewController<UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UIButton *btnSetImg;
 
 @property (strong, nonatomic) IBOutlet UITextField *txtName;
 @property (strong, nonatomic) IBOutlet UITextField *txtMobileNo;
@@ -33,5 +34,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tblReferenceUserNameList;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *tblReferenceUserNameList_Height;
 
-
+@property (strong,nonatomic)NSMutableDictionary *DicEditCustomer;
+@property(strong,nonatomic)NSString *strCheckAddEdit;
+@property(strong,nonatomic)NSMutableArray *aryCustomerList;
 @end

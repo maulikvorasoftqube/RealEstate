@@ -26,11 +26,11 @@
 		09821A9C1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A9B1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m */; };
 		09821A9E1FD6CF6E0082CD3E /* loginVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A9D1FD6CF6E0082CD3E /* loginVc.m */; };
 		099DD0EE1FD7B7B4007B4BEA /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 099DD0ED1FD7B7B4007B4BEA /* NIDropDown.m */; };
+		099DD0F81FD82547007B4BEA /* AddCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099DD0F21FD82547007B4BEA /* AddCustomerVC.m */; };
+		099DD0F91FD82547007B4BEA /* CustomerDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099DD0F51FD82547007B4BEA /* CustomerDetailVC.m */; };
+		099DD0FA1FD82547007B4BEA /* CustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099DD0F71FD82547007B4BEA /* CustomerVC.m */; };
 		09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDE81FD511B000478354 /* PayOutVC.m */; };
-		09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEB1FD511C700478354 /* CustomerVC.m */; };
 		09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF41FD511E700478354 /* CollectionVC.m */; };
-		09C5EDFB1FD5460000478354 /* AddCustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDFA1FD5460000478354 /* AddCustomerVC.m */; };
-		09C5EDFF1FD5554C00478354 /* CustomerDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */; };
 		09C5EE031FD559AC00478354 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE021FD559AC00478354 /* UITextView+Placeholder.m */; };
 		09C5EE0A1FD574ED00478354 /* UnitPrice_TblCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE091FD574ED00478354 /* UnitPrice_TblCellVC.m */; };
 		09C5EE111FD583FC00478354 /* BookingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EE101FD583FC00478354 /* BookingListVC.m */; };
@@ -73,16 +73,16 @@
 		09821A9D1FD6CF6E0082CD3E /* loginVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVc.m; sourceTree = "<group>"; };
 		099DD0EC1FD7B7B4007B4BEA /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		099DD0ED1FD7B7B4007B4BEA /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
+		099DD0F11FD82547007B4BEA /* AddCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerVC.h; sourceTree = "<group>"; };
+		099DD0F21FD82547007B4BEA /* AddCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerVC.m; sourceTree = "<group>"; };
+		099DD0F41FD82547007B4BEA /* CustomerDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDetailVC.h; sourceTree = "<group>"; };
+		099DD0F51FD82547007B4BEA /* CustomerDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDetailVC.m; sourceTree = "<group>"; };
+		099DD0F61FD82547007B4BEA /* CustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerVC.h; sourceTree = "<group>"; };
+		099DD0F71FD82547007B4BEA /* CustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerVC.m; sourceTree = "<group>"; };
 		09C5EDE71FD511B000478354 /* PayOutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOutVC.h; sourceTree = "<group>"; };
 		09C5EDE81FD511B000478354 /* PayOutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOutVC.m; sourceTree = "<group>"; };
-		09C5EDEA1FD511C700478354 /* CustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerVC.h; sourceTree = "<group>"; };
-		09C5EDEB1FD511C700478354 /* CustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerVC.m; sourceTree = "<group>"; };
 		09C5EDF31FD511E700478354 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
 		09C5EDF41FD511E700478354 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
-		09C5EDF91FD5460000478354 /* AddCustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerVC.h; sourceTree = "<group>"; };
-		09C5EDFA1FD5460000478354 /* AddCustomerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerVC.m; sourceTree = "<group>"; };
-		09C5EDFD1FD5554C00478354 /* CustomerDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDetailVC.h; sourceTree = "<group>"; };
-		09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDetailVC.m; sourceTree = "<group>"; };
 		09C5EE011FD559AC00478354 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		09C5EE021FD559AC00478354 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		09C5EE081FD574ED00478354 /* UnitPrice_TblCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPrice_TblCellVC.h; sourceTree = "<group>"; };
@@ -154,12 +154,12 @@
 		097EDD381FD11BCD0049C6D0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				099DD0EF1FD82547007B4BEA /* CustomerVC */,
 				09821A751FD662BB0082CD3E /* LoginVc */,
 				097EDD3C1FD11F3E0049C6D0 /* HomeVC */,
 				097EDD441FD150B20049C6D0 /* UnitAvailabilityVC */,
 				097EDD451FD150D00049C6D0 /* ReceiptVC */,
 				097EDD461FD150EC0049C6D0 /* PayOutVC */,
-				097EDD471FD1510B0049C6D0 /* CustomerVC */,
 				097EDD481FD1512B0049C6D0 /* BookingVC */,
 				097EDD4A1FD151580049C6D0 /* CollectionVC */,
 				097EDD491FD151430049C6D0 /* DocumentVC */,
@@ -223,17 +223,6 @@
 				09C5EDE81FD511B000478354 /* PayOutVC.m */,
 			);
 			path = PayOutVC;
-			sourceTree = "<group>";
-		};
-		097EDD471FD1510B0049C6D0 /* CustomerVC */ = {
-			isa = PBXGroup;
-			children = (
-				09C5EDEA1FD511C700478354 /* CustomerVC.h */,
-				09C5EDEB1FD511C700478354 /* CustomerVC.m */,
-				09C5EDF81FD545CC00478354 /* AddCustomerVC */,
-				09C5EDFC1FD5551E00478354 /* CustomerDetailVC */,
-			);
-			path = CustomerVC;
 			sourceTree = "<group>";
 		};
 		097EDD481FD1512B0049C6D0 /* BookingVC */ = {
@@ -355,20 +344,31 @@
 			path = NIDropdown;
 			sourceTree = "<group>";
 		};
-		09C5EDF81FD545CC00478354 /* AddCustomerVC */ = {
+		099DD0EF1FD82547007B4BEA /* CustomerVC */ = {
 			isa = PBXGroup;
 			children = (
-				09C5EDF91FD5460000478354 /* AddCustomerVC.h */,
-				09C5EDFA1FD5460000478354 /* AddCustomerVC.m */,
+				099DD0F01FD82547007B4BEA /* AddCustomerVC */,
+				099DD0F31FD82547007B4BEA /* CustomerDetailVC */,
+				099DD0F61FD82547007B4BEA /* CustomerVC.h */,
+				099DD0F71FD82547007B4BEA /* CustomerVC.m */,
+			);
+			path = CustomerVC;
+			sourceTree = "<group>";
+		};
+		099DD0F01FD82547007B4BEA /* AddCustomerVC */ = {
+			isa = PBXGroup;
+			children = (
+				099DD0F11FD82547007B4BEA /* AddCustomerVC.h */,
+				099DD0F21FD82547007B4BEA /* AddCustomerVC.m */,
 			);
 			path = AddCustomerVC;
 			sourceTree = "<group>";
 		};
-		09C5EDFC1FD5551E00478354 /* CustomerDetailVC */ = {
+		099DD0F31FD82547007B4BEA /* CustomerDetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				09C5EDFD1FD5554C00478354 /* CustomerDetailVC.h */,
-				09C5EDFE1FD5554C00478354 /* CustomerDetailVC.m */,
+				099DD0F41FD82547007B4BEA /* CustomerDetailVC.h */,
+				099DD0F51FD82547007B4BEA /* CustomerDetailVC.m */,
 			);
 			path = CustomerDetailVC;
 			sourceTree = "<group>";
@@ -548,11 +548,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */,
 				09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */,
 				09821A851FD6648E0082CD3E /* HomeVC.m in Sources */,
 				09821A891FD6796A0082CD3E /* DocumentListVC.m in Sources */,
-				09C5EDFF1FD5554C00478354 /* CustomerDetailVC.m in Sources */,
 				09821A971FD6AB0D0082CD3E /* UnitAvailabilityListVC.m in Sources */,
 				09821A701FD6626E0082CD3E /* WToast.m in Sources */,
 				09821A941FD6AAD00082CD3E /* CellUnitDetail.m in Sources */,
@@ -560,15 +558,17 @@
 				09C5EE0A1FD574ED00478354 /* UnitPrice_TblCellVC.m in Sources */,
 				09821A9E1FD6CF6E0082CD3E /* loginVc.m in Sources */,
 				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
+				099DD0F81FD82547007B4BEA /* AddCustomerVC.m in Sources */,
 				09821A741FD662840082CD3E /* Utility.m in Sources */,
 				097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */,
 				09821A821FD6637B0082CD3E /* Reachability.m in Sources */,
 				09C5EE111FD583FC00478354 /* BookingListVC.m in Sources */,
 				09C5EE161FD58EEA00478354 /* AddBookingVC.m in Sources */,
 				09821A8D1FD69BD30082CD3E /* UploadDocumentVC.m in Sources */,
+				099DD0F91FD82547007B4BEA /* CustomerDetailVC.m in Sources */,
+				099DD0FA1FD82547007B4BEA /* CustomerVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
 				099DD0EE1FD7B7B4007B4BEA /* NIDropDown.m in Sources */,
-				09C5EDFB1FD5460000478354 /* AddCustomerVC.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,
 				09821A9C1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m in Sources */,
 				09C5EE031FD559AC00478354 /* UITextView+Placeholder.m in Sources */,
