@@ -23,7 +23,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)commonData
@@ -49,7 +48,6 @@
     self.tblSelectUnit.clipsToBounds=YES;
 
     self.tblSelectUnit.separatorStyle =UITableViewCellSeparatorStyleNone;
-
 }
 
 #pragma mark - UITextField Delegate

@@ -35,14 +35,25 @@
 
 #define BASE_URL @"http://symphonyirms.softcube.in/Services"
 
-#define IMAGE_BASE_URL @""
+#define IMAGE_BASE_URL @"http://symphonyirms.softcube.in/Document/"
 
 
 #pragma mark - Method
 
 #define GetList @"/apk_Booking.asmx/GetUnitAvailabilityList"
 #define LOGIN @"/apk_Login.asmx/Login"
-#define GETUNITAVALIBILTY @"/apk_Booking.asmx/GetAllBookingList"
+#define GetAllBookingList @"/apk_Booking.asmx/GetAllBookingList"
+
+
+//mac0001
+
+#define GetAllDocuments @"/apk_Documents.asmx/GetAllDocuments"
+#define OtherOptions @"/apk_Documents.asmx/OtherOptions"
+#define AddEditDocument @"/apk_Documents.asmx/AddEditDocument"
+
+//=======
+
+
 //thirdParty
 
 #import <AFNetworking.h>
@@ -56,6 +67,16 @@
 #import <FTToastIndicator.h>
 #import <FTIndicator.h>
 #import "Reachability.h"
+
+
+//====MAC0001
+#import <UIImageView+AFNetworking.h>
+#import "NIDropDown.h"
+//
+
+
+
+
 
 /*
  

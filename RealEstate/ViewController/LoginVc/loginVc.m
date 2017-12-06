@@ -28,7 +28,9 @@
 
 - (IBAction)btnLoginClicked:(id)sender
 {
-    [self LoginAPI];
+    HomeVC *homVc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+    [self.navigationController pushViewController:homVc animated:YES];
+  //  [self LoginAPI];
 }
 
 #pragma mark - api call
@@ -62,9 +64,17 @@
              NSString *strJSON  = [dicResponce objectForKey:@"d"];
              NSMutableDictionary *Dic = [Utility ConvertStringtoJSON:strJSON];
              NSMutableArray *ary = [Dic mutableCopy];
-             
+         
+             [self setLoginData_LOCALDB:[ary objectAtIndex:0]];
              HomeVC *homVc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+    
+             NSDictionary *dic = [[NSDictionary alloc]initWithObjectsAndKeys:[[ary objectAtIndex:0]objectForKey:@"CompanyID"],@"CompanyID",[[ary objectAtIndex:0]objectForKey:@"UserDisplayName"],@"UsearID", nil];
+            
              homVc.strProperty =[[ary objectAtIndex:0]objectForKey:@"PropertyID"];
+             
+             [[NSUserDefaults standardUserDefaults]setObject:dic forKey:@"LoginData"];
+             [[NSUserDefaults standardUserDefaults]synchronize];
+             
              [self.navigationController pushViewController:homVc animated:YES];
          }
          else
@@ -77,6 +87,21 @@
      }];
     
 }
+
+-(void)setLoginData_LOCALDB:(NSMutableDictionary *)dic
+{
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"CompanyID"] forKey:@"CompanyID"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"PropertyID"] forKey:@"PropertyID"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"RoleID"] forKey:@"RoleID"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"RoleType"] forKey:@"RoleType"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"UsearID"] forKey:@"UsearID"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"UserDisplayName"] forKey:@"UserDisplayName"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"UserName"] forKey:@"UserName"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"UserType"] forKey:@"UserType"];
+        [[NSUserDefaults standardUserDefaults]setObject:[dic objectForKey:@"UserTypeID"] forKey:@"UserTypeID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 /*
 #pragma mark - Navigation
 

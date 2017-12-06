@@ -49,4 +49,16 @@
 @property (strong, nonatomic) IBOutlet UITableView *tblUnitPriceList;
 
 
+//select unit
+@property (strong, nonatomic) IBOutlet UIView *viewInnerSelectUnitList_popup;
+
+@property (strong, nonatomic) IBOutlet UIView *viewSelectUnit_popup;
+- (IBAction)btnClose_SelectUnit:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *txtSearch_SelectUnitPopup;
+@property (strong, nonatomic) IBOutlet UICollectionView *collection_SelectUnitList_Popup;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnContinue;
+- (IBAction)btnContinue:(id)sender;
+
+
 @end

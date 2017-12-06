@@ -28,15 +28,26 @@
 
 -(void)commonData
 {
-    self.btnSave.layer.borderWidth=1;
+    self.btnSave.layer.borderWidth=.7f;
     self.btnSave.layer.borderColor=[UIColor lightGrayColor].CGColor;
     self.btnSave.layer.cornerRadius=4;
     self.btnSave.clipsToBounds=YES;
+    
+    self.collection_SelectUnitList_Popup.layer.borderWidth=1;
+    self.collection_SelectUnitList_Popup.layer.borderColor=[UIColor groupTableViewBackgroundColor].CGColor;
+    self.collection_SelectUnitList_Popup.layer.cornerRadius=4;
+    self.collection_SelectUnitList_Popup.clipsToBounds=YES;
     
     self.tblCustomerNameList.layer.borderWidth=1;
     self.tblCustomerNameList.layer.borderColor=[UIColor lightGrayColor].CGColor;
     self.tblCustomerNameList.layer.cornerRadius=4;
     self.tblCustomerNameList.clipsToBounds=YES;
+    
+    self.btnContinue.layer.cornerRadius=4;
+    self.btnContinue.clipsToBounds=YES;
+    
+    self.viewInnerSelectUnitList_popup.layer.cornerRadius=4;
+    self.viewInnerSelectUnitList_popup.clipsToBounds=YES;
     
     self.tblCustomerNameList_Height.constant=0;
     self.viewUnitPriceList_Height.constant=6*52;
@@ -51,6 +62,8 @@
     [Utility setRightViewOfTextField:self.txtSelectUnit rightImageName:@"down_arrow"];
     [Utility setRightViewOfTextField:self.txtSelectdateofbooking rightImageName:@"down_arrow"];
     [Utility setRightViewOfTextField:self.txtSelectCustomerName rightImageName:@"down_arrow"];
+    
+    [self.viewSelectUnit_popup setHidden:YES];
 }
 
 #pragma mark - UITextField Delegate
@@ -77,6 +90,29 @@
     
     
     return YES;
+}
+
+#pragma mark - UICollectionView Delegate Method
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 9;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell=(UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell_row" forIndexPath:indexPath];
+    UIView *view=(UIView*)[cell.contentView viewWithTag:1];
+    view.layer.borderWidth=1;
+    view.layer.cornerRadius=4;
+    view.clipsToBounds=YES;
+    view.layer.borderColor=[UIColor lightGrayColor].CGColor;
+    
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 
@@ -144,6 +180,7 @@
 }
 
 - (IBAction)btnSelectUnit:(id)sender {
+    [self.viewSelectUnit_popup setHidden:NO];
 }
 
 - (IBAction)btnSelectdateofbooking:(id)sender {
@@ -155,5 +192,12 @@
 - (IBAction)btnAddNewCustomer:(id)sender {
     UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"AddCustomerVC"];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)btnClose_SelectUnit:(id)sender {
+    [self.viewSelectUnit_popup setHidden:YES];
+}
+
+- (IBAction)btnContinue:(id)sender {
 }
 @end

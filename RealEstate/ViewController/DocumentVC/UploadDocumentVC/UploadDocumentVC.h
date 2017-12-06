@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
-@interface UploadDocumentVC : UIViewController
+@interface UploadDocumentVC : UIViewController<NIDropDownDelegate>
+{
+    NIDropDown *dropDown;
+}
+
+@property (strong, nonatomic) NSMutableArray *arrDocType;
+@property (strong, nonatomic) NSMutableArray *arrCusType;
+
 
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnHome:(id)sender;

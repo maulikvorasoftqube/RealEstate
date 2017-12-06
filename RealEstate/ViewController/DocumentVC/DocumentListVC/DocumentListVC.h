@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
-@interface DocumentListVC : UIViewController<UITableViewDelegate, UITableViewDataSource>
-
+@interface DocumentListVC : UIViewController<UITableViewDelegate, UITableViewDataSource,NIDropDownDelegate>
+{
+    NIDropDown *dropDown;
+}
 
 //Header
 - (IBAction)btnBack:(id)sender;

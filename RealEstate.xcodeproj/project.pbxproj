@@ -17,7 +17,6 @@
 		097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EDD581FD193B30049C6D0 /* UnitDetailList_CollectionCell.m */; };
 		09821A701FD6626E0082CD3E /* WToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A6F1FD6626E0082CD3E /* WToast.m */; };
 		09821A741FD662840082CD3E /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A731FD662840082CD3E /* Utility.m */; };
-		09821A781FD662BB0082CD3E /* loginVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A771FD662BB0082CD3E /* loginVc.m */; };
 		09821A821FD6637B0082CD3E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A811FD6637B0082CD3E /* Reachability.m */; };
 		09821A851FD6648E0082CD3E /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A841FD6648E0082CD3E /* HomeVC.m */; };
 		09821A891FD6796A0082CD3E /* DocumentListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A881FD6796A0082CD3E /* DocumentListVC.m */; };
@@ -25,6 +24,8 @@
 		09821A941FD6AAD00082CD3E /* CellUnitDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A931FD6AAD00082CD3E /* CellUnitDetail.m */; };
 		09821A971FD6AB0D0082CD3E /* UnitAvailabilityListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A961FD6AB0D0082CD3E /* UnitAvailabilityListVC.m */; };
 		09821A9C1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A9B1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m */; };
+		09821A9E1FD6CF6E0082CD3E /* loginVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09821A9D1FD6CF6E0082CD3E /* loginVc.m */; };
+		099DD0EE1FD7B7B4007B4BEA /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 099DD0ED1FD7B7B4007B4BEA /* NIDropDown.m */; };
 		09C5EDE91FD511B000478354 /* PayOutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDE81FD511B000478354 /* PayOutVC.m */; };
 		09C5EDEC1FD511C700478354 /* CustomerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDEB1FD511C700478354 /* CustomerVC.m */; };
 		09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5EDF41FD511E700478354 /* CollectionVC.m */; };
@@ -54,7 +55,6 @@
 		09821A721FD662840082CD3E /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		09821A731FD662840082CD3E /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		09821A761FD662BB0082CD3E /* loginVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVc.h; sourceTree = "<group>"; };
-		09821A771FD662BB0082CD3E /* loginVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVc.m; sourceTree = "<group>"; };
 		09821A801FD6637B0082CD3E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		09821A811FD6637B0082CD3E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		09821A831FD6648E0082CD3E /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
@@ -70,6 +70,9 @@
 		09821A961FD6AB0D0082CD3E /* UnitAvailabilityListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitAvailabilityListVC.m; sourceTree = "<group>"; };
 		09821A981FD6AB5A0082CD3E /* Globle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globle.h; sourceTree = "<group>"; };
 		09821A9B1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitAvailabilityDetailVC.m; sourceTree = "<group>"; };
+		09821A9D1FD6CF6E0082CD3E /* loginVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVc.m; sourceTree = "<group>"; };
+		099DD0EC1FD7B7B4007B4BEA /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
+		099DD0ED1FD7B7B4007B4BEA /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		09C5EDE71FD511B000478354 /* PayOutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOutVC.h; sourceTree = "<group>"; };
 		09C5EDE81FD511B000478354 /* PayOutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOutVC.m; sourceTree = "<group>"; };
 		09C5EDEA1FD511C700478354 /* CustomerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerVC.h; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		097EDD3B1FD11C2F0049C6D0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				099DD0EB1FD7B77C007B4BEA /* NIDropdown */,
 				09821A7F1FD6635F0082CD3E /* Rechability */,
 				09821A6D1FD6623B0082CD3E /* WToast */,
 				09C5EE001FD5599300478354 /* TextView_PlaceHolder */,
@@ -301,7 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				09821A761FD662BB0082CD3E /* loginVc.h */,
-				09821A771FD662BB0082CD3E /* loginVc.m */,
+				09821A9D1FD6CF6E0082CD3E /* loginVc.m */,
 			);
 			path = LoginVc;
 			sourceTree = "<group>";
@@ -340,6 +344,15 @@
 				09821A931FD6AAD00082CD3E /* CellUnitDetail.m */,
 			);
 			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		099DD0EB1FD7B77C007B4BEA /* NIDropdown */ = {
+			isa = PBXGroup;
+			children = (
+				099DD0EC1FD7B7B4007B4BEA /* NIDropDown.h */,
+				099DD0ED1FD7B7B4007B4BEA /* NIDropDown.m */,
+			);
+			path = NIDropdown;
 			sourceTree = "<group>";
 		};
 		09C5EDF81FD545CC00478354 /* AddCustomerVC */ = {
@@ -545,15 +558,16 @@
 				09821A941FD6AAD00082CD3E /* CellUnitDetail.m in Sources */,
 				09C5EDF51FD511E700478354 /* CollectionVC.m in Sources */,
 				09C5EE0A1FD574ED00478354 /* UnitPrice_TblCellVC.m in Sources */,
+				09821A9E1FD6CF6E0082CD3E /* loginVc.m in Sources */,
 				097EDD551FD184840049C6D0 /* ReceiptVC.m in Sources */,
 				09821A741FD662840082CD3E /* Utility.m in Sources */,
 				097EDD591FD193B30049C6D0 /* UnitDetailList_CollectionCell.m in Sources */,
 				09821A821FD6637B0082CD3E /* Reachability.m in Sources */,
 				09C5EE111FD583FC00478354 /* BookingListVC.m in Sources */,
 				09C5EE161FD58EEA00478354 /* AddBookingVC.m in Sources */,
-				09821A781FD662BB0082CD3E /* loginVc.m in Sources */,
 				09821A8D1FD69BD30082CD3E /* UploadDocumentVC.m in Sources */,
 				097EDD261FD11B6A0049C6D0 /* AppDelegate.m in Sources */,
+				099DD0EE1FD7B7B4007B4BEA /* NIDropDown.m in Sources */,
 				09C5EDFB1FD5460000478354 /* AddCustomerVC.m in Sources */,
 				097EDD231FD11B6A0049C6D0 /* main.m in Sources */,
 				09821A9C1FD6B3100082CD3E /* UnitAvailabilityDetailVC.m in Sources */,

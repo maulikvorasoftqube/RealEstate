@@ -14,7 +14,8 @@
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnHome:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UITextField *txtSearch;
+
 
 @property (strong, nonatomic) IBOutlet UITableView *tblCustomerList;
 
