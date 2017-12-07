@@ -7,10 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
-@interface CollectionVC : UIViewController
+@interface CollectionVC : UIViewController<NIDropDownDelegate>
+{
+    NIDropDown *dropDown;
+}
+
+@property (nonatomic, strong) NSDate *selected_FromDate;
+@property (nonatomic, strong) NSDate *selected_ToDate;
+
+@property (nonatomic, strong) ActionSheetDatePicker *actionSheetPicker;
 
 @property (strong, nonatomic) IBOutlet UIView *viewtblHeader;
+
+@property (strong, nonatomic) IBOutlet UIView *viewtblFooter;
+@property (strong, nonatomic) IBOutlet UILabel *lbltblFooter_TotalPaidAmount;
+
+@property (nonatomic, strong) NSString *strNavigateToVC;
+
 
 //Header
 - (IBAction)btnBack:(id)sender;

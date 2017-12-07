@@ -9,6 +9,7 @@
 #import "HomeVC.h"
 #import "Globle.h"
 #import "ReceiptVC.h"
+#import "CollectionVC.h"
 
 @interface HomeVC ()
 
@@ -33,14 +34,24 @@
 #pragma mark - Count Action
 
 - (IBAction)btnCount1:(id)sender {
+    CollectionVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+    vc.strNavigateToVC=@"today";
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
+
 - (IBAction)btnCount2:(id)sender {
 }
+
 - (IBAction)btnCount3:(id)sender {
     UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"BookingListVC"];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 - (IBAction)btnCount4:(id)sender {
+    CollectionVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+    vc.strNavigateToVC=@"last_month";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Action
@@ -75,7 +86,8 @@
 }
 
 - (IBAction)btnCollection:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+    CollectionVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+    vc.strNavigateToVC=@"current_month";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

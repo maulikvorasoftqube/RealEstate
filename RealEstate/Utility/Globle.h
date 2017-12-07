@@ -67,6 +67,8 @@
 //MAc0001
 #define AddEditReceipt @"/apk_payment.asmx/AddEditReceipt"
 #define AddEditPayOut @"/apk_payment.asmx/AddEditPayOut"
+#define GetCollectionList @"/apk_payment.asmx/GetCollectionList"
+#define GetCollectionListByDateWise @"/apk_payment.asmx/GetCollectionListByDateWise"
 
 
 
