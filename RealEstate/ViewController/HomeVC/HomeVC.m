@@ -44,7 +44,8 @@
 }
 
 - (IBAction)btnCount3:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"BookingListVC"];
+    BookingListVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"BookingListVC"];
+    vc.strNavigateToVC=@"current_month";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

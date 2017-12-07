@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
 @interface BookingListVC : UIViewController
+
+
+@property (nonatomic, strong) NSString *strNavigateToVC;
 
 //Header
 - (IBAction)btnBack:(id)sender;

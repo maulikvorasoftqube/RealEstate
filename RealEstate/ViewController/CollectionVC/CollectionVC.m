@@ -128,9 +128,6 @@
     return lastdateofcurrentmonth;
 }
 
-
-
-
 - (NSDate *)returnDateForMonth:(NSInteger)month year:(NSInteger)year day:(NSInteger)day {
     
     NSDateComponents *components = [[NSDateComponents alloc] init];
@@ -433,10 +430,7 @@
         
         self.txtselecttodate.text = result;
     }
-    
-    
 }
-
 
 #pragma mark - UIButton Action
 

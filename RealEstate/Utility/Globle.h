@@ -21,7 +21,7 @@
 #import "AddCustomerVC.h"
 #import "CustomerDetailVC.h"
 #import "CustomerVC.h"
-
+#import "BookingListVC.h"
 
 
 
@@ -49,7 +49,6 @@
 
 #define GetList @"/apk_Booking.asmx/GetUnitAvailabilityList"
 #define LOGIN @"/apk_Login.asmx/Login"
-#define GetAllBookingList @"/apk_Booking.asmx/GetAllBookingList"
 
 #define GetAllInvestors @"/apk_Investor.asmx/GetAllInvestors"
 #define GetInvestorDetails @"/apk_Investor.asmx/GetInvestorDetails"
@@ -65,6 +64,9 @@
 
 
 //MAc0001
+#define GetAllBookingList @"/apk_Booking.asmx/GetAllBookingList"
+#define GetCurrentMonthBookingList @"/apk_Booking.asmx/GetCurrentMonthBookingList"
+
 #define AddEditReceipt @"/apk_payment.asmx/AddEditReceipt"
 #define AddEditPayOut @"/apk_payment.asmx/AddEditPayOut"
 #define GetCollectionList @"/apk_payment.asmx/GetCollectionList"
