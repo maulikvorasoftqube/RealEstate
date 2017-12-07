@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Globle.h"
 
-@interface ReceiptVC : UIViewController<NIDropDownDelegate>
+@interface ReceiptVC : UIViewController <NIDropDownDelegate>
 {
     NIDropDown *dropDown;
 }
+
+@property (nonatomic, strong) NSDate *selectedDate;
+@property (nonatomic, strong) ActionSheetDatePicker *actionSheetPicker;
+@property (nonatomic, strong) NSString *strNavigateToVC;
+@property (strong, nonatomic) IBOutlet UILabel *lblHeaderTitle;
 
 @property (strong, nonatomic) IBOutlet UITextField *txtbtnProperty;
 @property (strong, nonatomic) IBOutlet UIButton *btnProperty;

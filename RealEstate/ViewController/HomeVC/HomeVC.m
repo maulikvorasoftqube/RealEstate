@@ -8,6 +8,7 @@
 
 #import "HomeVC.h"
 #import "Globle.h"
+#import "ReceiptVC.h"
 
 @interface HomeVC ()
 
@@ -52,12 +53,14 @@
 }
 
 - (IBAction)btnReceipt:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    ReceiptVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    vc.strNavigateToVC = @"receipt";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btnPayOut:(id)sender {
-    UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    ReceiptVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptVC"];
+    vc.strNavigateToVC = @"payout";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

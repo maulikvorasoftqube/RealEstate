@@ -13,7 +13,6 @@
 
 
 //viewcontroller
-
 #import "Utility.h"
 #import "HomeVC.h"
 #import "loginVc.h"
@@ -22,6 +21,11 @@
 #import "AddCustomerVC.h"
 #import "CustomerDetailVC.h"
 #import "CustomerVC.h"
+
+
+
+
+
 
 //UITableView cell
 
@@ -54,11 +58,15 @@
 #define GetAllDocuments @"/apk_Documents.asmx/GetAllDocuments"
 #define OtherOptions @"/apk_Documents.asmx/OtherOptions"
 #define AddEditDocument @"/apk_Documents.asmx/AddEditDocument"
-
-
 #define GetAllOptions @"/apk_Login.asmx/GetAllOptions"
 
 #define GetCustomerByUnitNo @"/apk_payment.asmx/GetCustomerByUnitNo"
+
+
+
+//MAc0001
+#define AddEditReceipt @"/apk_payment.asmx/AddEditReceipt"
+#define AddEditPayOut @"/apk_payment.asmx/AddEditPayOut"
 
 
 
@@ -81,6 +89,11 @@
 #import <UIImageView+AFNetworking.h>
 #import "NIDropDown.h"
 
+
+//=====MAC0001======
+#import <ActionSheetDatePicker.h>
+
+//============
 
 /*
  pod 'AFNetworking', '~> 3.0'

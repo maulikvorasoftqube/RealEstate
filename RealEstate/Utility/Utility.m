@@ -308,7 +308,9 @@
                                                         options:0
                                                           range:NSMakeRange(0, [string length])];
     if (numberOfMatches == 0)
+    {
         return NO;
+    }
     
     return YES;
     
