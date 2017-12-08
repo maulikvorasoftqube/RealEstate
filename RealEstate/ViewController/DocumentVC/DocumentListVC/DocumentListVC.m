@@ -271,7 +271,7 @@
     
     UIImageView *imgDoc=(UIImageView*)[cell.contentView viewWithTag:2];
     [imgDoc setImage:nil];
-    [imgDoc setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,DocumentName]]];
+    [imgDoc setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL_Document,DocumentName]]];
     
     
     return cell;

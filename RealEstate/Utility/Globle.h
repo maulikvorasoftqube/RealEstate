@@ -24,9 +24,6 @@
 #import "BookingListVC.h"
 
 
-
-
-
 //UITableView cell
 
 //collection cell
@@ -42,11 +39,13 @@
 
 #define BASE_URL @"http://symphonyirms.softcube.in/Services"
 
-#define IMAGE_BASE_URL @"http://symphonyirms.softcube.in/Document/"
+#define IMAGE_BASE_URL_Document @"http://symphonyirms.softcube.in/Document/"
+#define IMAGE_BASE_URL @"http://symphonyirms.softcube.in/UploadPhoto/"
+
 
 
 #pragma mark - Method
-
+#define GETALLSTRATEGY @"/apk_Login.asmx/GetAllStatistics"
 #define GetList @"/apk_Booking.asmx/GetUnitAvailabilityList"
 #define LOGIN @"/apk_Login.asmx/Login"
 
@@ -61,20 +60,14 @@
 
 #define GetCustomerByUnitNo @"/apk_payment.asmx/GetCustomerByUnitNo"
 
-
-
-//MAc0001
 #define GetAllBookingList @"/apk_Booking.asmx/GetAllBookingList"
+#define AddEditBooking @"/apk_Booking.asmx/AddEditBooking"
 #define GetCurrentMonthBookingList @"/apk_Booking.asmx/GetCurrentMonthBookingList"
 
 #define AddEditReceipt @"/apk_payment.asmx/AddEditReceipt"
 #define AddEditPayOut @"/apk_payment.asmx/AddEditPayOut"
 #define GetCollectionList @"/apk_payment.asmx/GetCollectionList"
 #define GetCollectionListByDateWise @"/apk_payment.asmx/GetCollectionListByDateWise"
-
-
-
-//=======
 
 
 //thirdParty
@@ -92,12 +85,8 @@
 #import "Reachability.h"
 #import <UIImageView+AFNetworking.h>
 #import "NIDropDown.h"
-
-
-//=====MAC0001======
 #import <ActionSheetDatePicker.h>
 
-//============
 
 /*
  pod 'AFNetworking', '~> 3.0'
@@ -137,6 +126,12 @@
 #define SELECTREFVALID @"Please select valid reference name.."
 #define IDPROOF @"Please select IDproof Photo.."
 #define SIGNATUREPIC @"Please select Signature Photo.."
-
+#define SELECTPROPERTY @"Please property..."
+#define SELECTBLOCK @"Please block..."
+#define SELECTUNIT @"Please at least one unit..."
+#define SELECTDATE @"Please date..."
+#define SELECTVALIDCUST @"Please select valid customer name.."
+#define UNITPRICE @"Please enter unit price grater than 0"
+#define UNITPRICEADD @"Please enter unit price..."
 
 #endif /* Globle_h */

@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Globle.h"
 
-@interface AddBookingVC : UIViewController
+@interface AddBookingVC : UIViewController<NIDropDownDelegate,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
+{
+    NIDropDown *dropDown;
+}
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnHome:(id)sender;
 

@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnSetImg;
 
 @property (strong, nonatomic) IBOutlet UITextField *txtName;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *txtMobileNo;
 @property (strong, nonatomic) IBOutlet UITextField *txtRefUserName;
 @property (strong, nonatomic) IBOutlet UITextView *txtTermandConditin;

@@ -104,34 +104,45 @@
             strReferenceID = [NSString stringWithFormat:@"%@",[_DicEditCustomer objectForKey:@"InvestorID"]];
         }
         
-        UIImageView *img = [[UIImageView alloc]init];
+        
+        UIImageView *imgDoc=[[UIImageView alloc]init];
+        
+        UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [indicator startAnimating];
+        [indicator setCenter:self.btnIdProof.center];
+        [_scrollView addSubview:indicator];
+        
+        UIActivityIndicatorView *indicator1 = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [indicator1 startAnimating];
+        [indicator1 setCenter:self.btnsigned.center];
+       [_scrollView addSubview:indicator1];
+        
+        [imgDoc setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,[_DicEditCustomer objectForKey:@"IDproofImage"]]]] placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image)
+         {
+            [self.btnIdProof setBackgroundImage:image forState:UIControlStateNormal];
+             [_btnIdProof setAttributedTitle:@"" forState:UIControlStateNormal];
+               [indicator removeFromSuperview];
+            
+        } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error)
+         {
+             [_btnIdProof setAttributedTitle:@"Upload Photo" forState:UIControlStateNormal];
+               [indicator removeFromSuperview];
+        }];
+        
+        
         UIImageView *img1 = [[UIImageView alloc]init];
-        //IMAGE_BASE_URL
-        
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,[_DicEditCustomer objectForKey:@"IDproofImage"]]]];
-        
-        NSURLRequest *request1 = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,[_DicEditCustomer objectForKey:@"IsSignedImage"]]]];
-        
-        
-        [img setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image)
+        [img1 setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL,[_DicEditCustomer objectForKey:@"IsSignedImage"]]]] placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image)
         {
-            [_btnIdProof setBackgroundImage:image forState:UIControlStateNormal];
-            
-            
-            [img1 setImageWithURLRequest:request1 placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image)
-             {
-                 [_btnsigned setBackgroundImage:image forState:UIControlStateNormal];
-                 
-                 
-             } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error)
-             {
-                 
-             }];
+            [self.btnsigned setBackgroundImage:image forState:UIControlStateNormal];
+            [_btnsigned setAttributedTitle:@"" forState:UIControlStateNormal];
+            [indicator1 removeFromSuperview];
             
         } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error)
         {
-            
+             [_btnsigned setAttributedTitle:@"Upload Photo" forState:UIControlStateNormal];
+            [indicator1 removeFromSuperview];
         }];
+        
     }
     else
     {

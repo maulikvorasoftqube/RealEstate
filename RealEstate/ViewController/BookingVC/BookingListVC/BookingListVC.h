@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Globle.h"
+#import <ActionSheetPicker.h>
 
 @interface BookingListVC : UIViewController
 
+@property (nonatomic, strong) NSDate *selected_FromDate;
+@property (nonatomic, strong) NSDate *selected_ToDate;
+
+@property (nonatomic, strong) ActionSheetDatePicker *actionSheetPicker;
 
 @property (nonatomic, strong) NSString *strNavigateToVC;
 
